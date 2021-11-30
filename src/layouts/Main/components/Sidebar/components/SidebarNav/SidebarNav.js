@@ -6,17 +6,13 @@ import { useTheme } from '@mui/material/styles';
 
 import NavItem from './components/NavItem';
 
-const SidebarNav = ({ pages }) => {
+const SidebarNav = ({ pages, onContactUs }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
 
   const {
-    landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
+    aboutUs: aboutUs,
+    ourWork: ourWork,
   } = pages;
 
   return (
@@ -26,62 +22,63 @@ const SidebarNav = ({ pages }) => {
           display={'flex'}
           component="a"
           href="/"
-          title="theFront"
+          title="template title"
           width={{ xs: 100, md: 120 }}
         >
           <Box
             component={'img'}
             src={
               mode === 'light'
-                ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+                ? 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
+                : 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
             }
-            height={1}
-            width={1}
+            height={0.5}
+            width={0.5}
           />
         </Box>
       </Box>
       <Box paddingX={2} paddingY={2}>
         <Box>
-          <NavItem title={'Landings'} items={landingPages} />
+          <NavItem title={'About Us'} items={aboutUs} />
         </Box>
         <Box>
-          <NavItem title={'Company'} items={companyPages} />
+          <NavItem title={'Our Work'} items={ourWork} />
         </Box>
-        <Box>
-          <NavItem title={'Pages'} items={secondaryPages} />
-        </Box>
-        <Box>
-          <NavItem title={'Account'} items={accountPages} />
-        </Box>
-        <Box>
-          <NavItem title={'Blog'} items={blogPages} />
-        </Box>
-        <Box>
-          <NavItem title={'Portfolio'} items={portfolioPages} />
-        </Box>
+        {/*<Box>*/}
+        {/*  <NavItem title={'Pages'} items={secondaryPages} />*/}
+        {/*</Box>*/}
+        {/*<Box>*/}
+        {/*  <NavItem title={'Account'} items={accountPages} />*/}
+        {/*</Box>*/}
+        {/*<Box>*/}
+        {/*  <NavItem title={'Blog'} items={blogPages} />*/}
+        {/*</Box>*/}
+        {/*<Box>*/}
+        {/*  <NavItem title={'Portfolio'} items={portfolioPages} />*/}
+        {/*</Box>*/}
+        {/*<Box marginTop={2}>*/}
+        {/*  <Button*/}
+        {/*    size={'large'}*/}
+        {/*    variant="outlined"*/}
+        {/*    fullWidth*/}
+        {/*    component="a"*/}
+        {/*    href="/docs/introduction"*/}
+        {/*  >*/}
+        {/*    Documentation*/}
+        {/*  </Button>*/}
+        {/*</Box>*/}
         <Box marginTop={2}>
-          <Button
-            size={'large'}
-            variant="outlined"
-            fullWidth
-            component="a"
-            href="/docs/introduction"
-          >
-            Documentation
-          </Button>
-        </Box>
-        <Box marginTop={1}>
           <Button
             size={'large'}
             variant="contained"
             color="primary"
             fullWidth
             component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
+            target="_self"
+            // href="/#contact-us"
+            onClick={() => onContactUs()}
           >
-            Purchase now
+            Contact Us
           </Button>
         </Box>
       </Box>

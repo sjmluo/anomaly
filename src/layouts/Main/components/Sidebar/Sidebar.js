@@ -4,7 +4,7 @@ import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import { SidebarNav } from './components';
 
-const Sidebar = ({ pages, open, variant, onClose }) => {
+const Sidebar = ({ pages, open, variant, onClose, onContactUs }) => {
   return (
     <Drawer
       anchor="left"
@@ -24,7 +24,10 @@ const Sidebar = ({ pages, open, variant, onClose }) => {
           padding: 1,
         }}
       >
-        <SidebarNav pages={pages} />
+        <SidebarNav
+            pages={pages}
+            onContactUs={() => onContactUs()}
+        />
       </Box>
     </Drawer>
   );
