@@ -7,7 +7,7 @@ import Main from 'layouts/Main';
 import Container from 'components/Container';
 import {
   Welcome,
-  Goby,
+  Template,
   Process,
   Nike2,
   Larq,
@@ -119,7 +119,7 @@ const Agency = () => {
           )}
         />
         <Container>
-          <Goby />
+          <Template />
         </Container>
       </Box>
       <Box
@@ -138,7 +138,7 @@ const Agency = () => {
           )}
         />
         <Container>
-          <Larq />
+          <Template />
         </Container>
       </Box>
       {/*<Box*/}
@@ -168,7 +168,7 @@ const Agency = () => {
           )}
         />
         <Container>
-          <Nike />
+          <Template />
         </Container>
       </Box>
       {/*<Box*/}
