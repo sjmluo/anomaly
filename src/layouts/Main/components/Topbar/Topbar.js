@@ -6,17 +6,14 @@ import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { NavItem } from './components';
+import {ThemeModeToggler} from "../index";
 
-const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
+const Topbar = ({ onSidebarOpen, pages, colorInvert = false , onContactUs}) => {
   const theme = useTheme();
   const { mode } = theme.palette;
   const {
-    landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
+    aboutUs: aboutUs,
+    ourWork: ourWork,
   } = pages;
 
   return (
@@ -30,79 +27,49 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         display={'flex'}
         component="a"
         href="/"
-        title="theFront"
+        title="template title"
         width={{ xs: 100, md: 120 }}
       >
         <Box
           component={'img'}
           src={
             mode === 'light' && !colorInvert
-              ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-              : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+              ? 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
+              : 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
           }
-          height={1}
-          width={1}
+          height={0.5}
+          width={0.5}
         />
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box>
-          <NavItem
-            title={'Landings'}
-            id={'landing-pages'}
-            items={landingPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
         <Box marginLeft={4}>
           <NavItem
-            title={'Company'}
-            id={'company-pages'}
-            items={companyPages}
+            title={'About Us'}
+            id={'about-us'}
+            items={aboutUs}
             colorInvert={colorInvert}
           />
         </Box>
-        <Box marginLeft={4}>
+        <Box marginLeft={4} marginRight={4}>
           <NavItem
-            title={'Account'}
-            id={'account-pages'}
-            items={accountPages}
+            title={'Our Work'}
+            id={'our-work'}
+            items={ourWork}
             colorInvert={colorInvert}
           />
         </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Pages'}
-            id={'secondary-pages'}
-            items={secondaryPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Blog'}
-            id={'blog-pages'}
-            items={blogPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Portfolio'}
-            id={'portfolio-pages'}
-            items={portfolioPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
+        <ThemeModeToggler/>
         <Box marginLeft={4}>
           <Button
             variant="contained"
             color="primary"
             component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
+            target="_self"
+            // href="/#contact-us"
             size="large"
+            onClick={() => onContactUs()}
           >
-            Buy now
+            Contact Us
           </Button>
         </Box>
       </Box>

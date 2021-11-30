@@ -31,59 +31,48 @@ const Footer = () => {
               component={'img'}
               src={
                 mode === 'light'
-                  ? 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
-                  : 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
+                  ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
+                  : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
               }
               height={1}
               width={1}
             />
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
-            <Box marginTop={1} marginRight={4}>
+            <Box marginTop={1} marginRight={2}>
               <Link
                 underline="none"
                 component="a"
-                href="/mission"
+                href="/"
                 color="text.primary"
                 variant={'subtitle2'}
               >
-                Mission
+                Home
               </Link>
             </Box>
-            <Box marginTop={1} marginRight={4}>
+            <Box marginTop={1} marginRight={2}>
               <Link
-                  underline="none"
-                  component="a"
-                  href="/team"
-                  color="text.primary"
-                  variant={'subtitle2'}
+                underline="none"
+                component="a"
+                href="/docs/introduction"
+                color="text.primary"
+                variant={'subtitle2'}
               >
-                Team
+                Documentation
               </Link>
             </Box>
             <Box marginTop={1}>
-              <Link
-                underline="none"
+              <Button
+                variant="outlined"
+                color="primary"
                 component="a"
-                href="/blog"
-                color="text.primary"
-                variant={'subtitle2'}
+                target="blank"
+                href="https://mui.com/store/items/the-front-landing-page/"
+                size="small"
               >
-                Blog
-              </Link>
+                Purchase now
+              </Button>
             </Box>
-            {/*<Box marginTop={1}>*/}
-            {/*  <Button*/}
-            {/*    variant="outlined"*/}
-            {/*    color="primary"*/}
-            {/*    component="a"*/}
-            {/*    target="blank"*/}
-            {/*    href="https://mui.com/store/items/the-front-landing-page/"*/}
-            {/*    size="small"*/}
-            {/*  >*/}
-            {/*    Purchase now*/}
-            {/*  </Button>*/}
-            {/*</Box>*/}
           </Box>
         </Box>
       </Grid>
@@ -94,7 +83,7 @@ const Footer = () => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; template copyright
+          &copy; theFront. 2021, Maccarian. All rights reserved
         </Typography>
         <Typography
           align={'center'}
