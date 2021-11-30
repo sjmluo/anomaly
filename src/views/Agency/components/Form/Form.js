@@ -154,7 +154,7 @@ const Contact = () => {
             </Grid>
             <Grid item container justifyContent={'center'} xs={12}>
               <Typography color="text.secondary">
-                We'll get back to you in 1-2 business days.
+                We'll get back to you in __ business days.
               </Typography>
             </Grid>
             <Grid item xs={12}>
