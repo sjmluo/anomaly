@@ -70,20 +70,25 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, onContactUs }) => {
           </Button>
         </Box>
       </Box>
-      <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>
-        <Button
-          onClick={() => onSidebarOpen()}
-          aria-label="Menu"
-          variant={'outlined'}
-          sx={{
-            borderRadius: 2,
-            minWidth: 'auto',
-            padding: 1,
-            borderColor: alpha(theme.palette.divider, 0.2),
-          }}
-        >
-          <MenuIcon />
-        </Button>
+      <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>
+        <Box>
+          <ThemeModeToggler />
+        </Box>
+        <Box marginLeft={4}>
+          <Button
+            onClick={() => onSidebarOpen()}
+            aria-label="Menu"
+            variant={'outlined'}
+            sx={{
+              borderRadius: 2,
+              minWidth: 'auto',
+              padding: 1,
+              borderColor: alpha(theme.palette.divider, 0.2),
+            }}
+          >
+            <MenuIcon />
+          </Button>
+      </Box>
       </Box>
     </Box>
   );
