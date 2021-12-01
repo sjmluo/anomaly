@@ -64,7 +64,7 @@ const Contact = () => {
           align={'center'}
           gutterBottom
         >
-          Contact us
+          Contact Us
         </Typography>
         {/*<Typography color="text.secondary" align={'center'}>*/}
         {/*  Rather than worrying about switching offices every couple years, you*/}
@@ -154,46 +154,46 @@ const Contact = () => {
             </Grid>
             <Grid item container justifyContent={'center'} xs={12}>
               <Typography color="text.secondary">
-                We'll get back to you in __ business days.
+                We'll get back to you in 5 business days.
               </Typography>
             </Grid>
-            <Grid item xs={12}>
-              <Divider />
-            </Grid>
-            <Grid item container justifyContent={'center'} xs={12}>
-              <Box>
-                <Typography component="p" variant="body2" align="left">
-                  By clicking on "submit" you agree to our{' '}
-                  <Box
-                    component="a"
-                    href=""
-                    color={theme.palette.text.primary}
-                    fontWeight={'700'}
-                  >
-                    Privacy Policy
-                  </Box>
-                  ,{' '}
-                  <Box
-                    component="a"
-                    href=""
-                    color={theme.palette.text.primary}
-                    fontWeight={'700'}
-                  >
-                    Data Policy
-                  </Box>{' '}
-                  and{' '}
-                  <Box
-                    component="a"
-                    href=""
-                    color={theme.palette.text.primary}
-                    fontWeight={'700'}
-                  >
-                    Cookie Policy
-                  </Box>
-                  .
-                </Typography>
-              </Box>
-            </Grid>
+            {/*<Grid item xs={12}>*/}
+            {/*  <Divider />*/}
+            {/*</Grid>*/}
+            {/*<Grid item container justifyContent={'center'} xs={12}>*/}
+              {/*<Box>*/}
+              {/*  <Typography component="p" variant="body2" align="left">*/}
+              {/*    By clicking on "submit" you agree to our{' '}*/}
+              {/*    <Box*/}
+              {/*      component="a"*/}
+              {/*      href=""*/}
+              {/*      color={theme.palette.text.primary}*/}
+              {/*      fontWeight={'700'}*/}
+              {/*    >*/}
+              {/*      Privacy Policy*/}
+              {/*    </Box>*/}
+              {/*    ,{' '}*/}
+              {/*    <Box*/}
+              {/*      component="a"*/}
+              {/*      href=""*/}
+              {/*      color={theme.palette.text.primary}*/}
+              {/*      fontWeight={'700'}*/}
+              {/*    >*/}
+              {/*      Data Policy*/}
+              {/*    </Box>{' '}*/}
+              {/*    and{' '}*/}
+              {/*    <Box*/}
+              {/*      component="a"*/}
+              {/*      href=""*/}
+              {/*      color={theme.palette.text.primary}*/}
+              {/*      fontWeight={'700'}*/}
+              {/*    >*/}
+              {/*      Cookie Policy*/}
+              {/*    </Box>*/}
+              {/*    .*/}
+              {/*  </Typography>*/}
+              {/*</Box>*/}
+            {/*</Grid>*/}
           </Grid>
         </form>
       </Box>
