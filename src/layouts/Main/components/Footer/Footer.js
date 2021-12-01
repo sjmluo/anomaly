@@ -95,11 +95,11 @@ const Footer = () => {
               <Link
                 underline="none"
                 component="a"
-                href="/mission"
+                href="/about"
                 color="text.primary"
                 variant={'subtitle2'}
               >
-                Mission
+                About
               </Link>
             </Box>
             <Box marginTop={1} marginRight={4}>
