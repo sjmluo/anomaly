@@ -15,7 +15,7 @@ import {
   Trek,
   Curology,
   Reviews,
-  Contact,
+  Form,
 } from './components';
 
 
@@ -242,14 +242,14 @@ const Agency = () => {
       {/*  </Container>*/}
       {/*</Box>*/}
       <Box
-        minHeight={'100vh'}
+        minHeight={'82vh'}
         display={'flex'}
         alignItems={'center'}
         bgcolor={'alternate.main'}
         id={"contact-us"}
       >
         <Container>
-          <Contact />
+          <Form />
         </Container>
       </Box>
     </Main>
