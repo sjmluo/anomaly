@@ -21,7 +21,7 @@ const Blog = () => {
   });
 
   return (
-    <Main colorInvert={true}>
+    <Main>
       <Box bgcolor={'main'}>
         <Container>
           <Articles />
