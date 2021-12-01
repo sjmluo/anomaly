@@ -1,10 +1,10 @@
 import React from 'react';
-import Agency from 'views/Agency';
+import IndexView from 'views/IndexView';
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
-const AgencyPage = () => {
-  return <Agency />;
+const IndexPage = () => {
+  return <IndexView />;
 };
 
-export default AgencyPage;
+export default IndexPage;

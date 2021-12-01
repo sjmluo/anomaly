@@ -1,8 +1,8 @@
 const pages = {
   aboutUs: [
     {
-      title: 'Our Mission',
-      href: '/mission',
+      title: 'About',
+      href: '/about',
     },
     {
       title: 'Meet the team',
