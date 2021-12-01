@@ -10,7 +10,9 @@ import Container from 'components/Container';
 import {
   FooterNewsletter,
   Articles,
+  Forms,
 } from './components';
+import {Form} from "../About/components";
 
 const Blog = () => {
   const theme = useTheme();
@@ -28,9 +30,17 @@ const Blog = () => {
       <Container maxWidth={800} paddingY={'0 !important'}>
         <Divider />
       </Container>
-      <Container>
-        <FooterNewsletter />
-      </Container>
+        <Box
+            minHeight={'82vh'}
+            display={'flex'}
+            alignItems={'center'}
+            bgcolor={'main'}
+            id={"contact-us"}
+        >
+            <Container>
+                <Form />
+            </Container>
+        </Box>
     </Main>
   );
 };
