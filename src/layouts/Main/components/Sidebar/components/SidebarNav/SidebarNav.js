@@ -10,10 +10,7 @@ const SidebarNav = ({ pages, onContactUs }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
 
-  const {
-    aboutUs: aboutUs,
-    ourWork: ourWork,
-  } = pages;
+  const { aboutUs: aboutUs, ourWork: ourWork } = pages;
 
   return (
     <Box>

@@ -7,14 +7,14 @@ const pages = {
     {
       title: 'Meet the team',
       href: '/team',
-    }
+    },
   ],
   ourWork: [
     {
       title: 'Blog',
       href: '/blog',
-    }
-  ]
+    },
+  ],
 };
 
 export default pages;

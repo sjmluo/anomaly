@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import AppBar from '@mui/material/AppBar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import Container from 'components/Container';
-import { Topbar, Sidebar, Footer, ThemeModeToggler } from './components';
+import { Topbar, Sidebar, Footer } from './components';
 
 import pages from '../navigation';
 
@@ -38,70 +36,22 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
   });
 
   const goToContact = () => {
-      scrollTo("contact-us")
-  }
+    scrollTo('contact-us');
+  };
 
   const scrollTo = (id) => {
-      setTimeout(() => {
-          const element = document.querySelector(`#${id}`);
-          if (!element) {
-              return;
-          }
+    setTimeout(() => {
+      const element = document.querySelector(`#${id}`);
+      if (!element) {
+        return;
+      }
 
-          window.scrollTo({ left: 0, top: element.offsetTop, behavior: 'smooth' });
-      });
+      window.scrollTo({ left: 0, top: element.offsetTop, behavior: 'smooth' });
+    });
   };
 
   return (
     <Box>
-      {/*<Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>*/}
-      {/*  <Container paddingTop={'8px !important'} paddingBottom={'0 !important'}>*/}
-      {/*    <Box*/}
-      {/*      display={'flex'}*/}
-      {/*      justifyContent={'flex-end'}*/}
-      {/*      alignItems={'center'}*/}
-      {/*    >*/}
-      {/*      <Box marginRight={2}>*/}
-      {/*        <Link*/}
-      {/*          underline="none"*/}
-      {/*          component="a"*/}
-      {/*          href="/blocks"*/}
-      {/*          color={colorInvert ? 'common.white' : 'text.primary'}*/}
-      {/*          sx={{ display: 'flex', alignItems: 'center' }}*/}
-      {/*        >*/}
-      {/*          Components*/}
-      {/*          <Box*/}
-      {/*            padding={0.5}*/}
-      {/*            display={'inline-flex'}*/}
-      {/*            borderRadius={1}*/}
-      {/*            bgcolor={'primary.main'}*/}
-      {/*            marginLeft={1}*/}
-      {/*          >*/}
-      {/*            <Typography*/}
-      {/*              variant={'caption'}*/}
-      {/*              sx={{ color: 'common.white', lineHeight: 1 }}*/}
-      {/*            >*/}
-      {/*              new*/}
-      {/*            </Typography>*/}
-      {/*          </Box>*/}
-      {/*        </Link>*/}
-      {/*      </Box>*/}
-      {/*      <Box marginRight={2}>*/}
-      {/*        <Link*/}
-      {/*          underline="none"*/}
-      {/*          component="a"*/}
-      {/*          href="/docs/introduction"*/}
-      {/*          color={colorInvert ? 'common.white' : 'text.primary'}*/}
-      {/*        >*/}
-      {/*          Docs*/}
-      {/*        </Link>*/}
-      {/*      </Box>*/}
-      {/*      <Box>*/}
-      {/*        <ThemeModeToggler />*/}
-      {/*      </Box>*/}
-      {/*    </Box>*/}
-      {/*  </Container>*/}
-      {/*</Box>*/}
       <AppBar
         position={'sticky'}
         sx={{

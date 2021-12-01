@@ -4,11 +4,7 @@ import { useTheme } from '@mui/material/styles';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import {
-    Hero,
-    Main as MainSection,
-    Form
-} from './components';
+import { Hero, Main as MainSection, Form } from './components';
 
 const Team = () => {
   const theme = useTheme();
@@ -50,17 +46,17 @@ const Team = () => {
           />
         </Box>
       </Box>
-        <Box
+      <Box
         minHeight={'82vh'}
         display={'flex'}
         alignItems={'center'}
         bgcolor={'alternate.main'}
-        id={"contact-us"}
-    >
+        id={'contact-us'}
+      >
         <Container>
-            <Form />
+          <Form />
         </Container>
-    </Box>
+      </Box>
     </Main>
   );
 };

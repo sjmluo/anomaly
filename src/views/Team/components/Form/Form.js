@@ -33,7 +33,6 @@ const validationSchema = yup.object({
 });
 
 const Contact = () => {
-
   const initialValues = {
     firstName: '',
     lastName: '',
@@ -55,7 +54,7 @@ const Contact = () => {
     <Box maxWidth={600} margin={'0 auto'}>
       <Box marginBottom={4}>
         <Typography
-          color='#F178B6'
+          color="#F178B6"
           variant={'h3'}
           sx={{ fontWeight: 700 }}
           align={'center'}

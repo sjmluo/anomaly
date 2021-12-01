@@ -86,7 +86,8 @@ const Hero = () => {
               color: 'common.white',
             }}
           >
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ornare ex, quis fringilla nisi."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            ut ornare ex, quis fringilla nisi."
           </Typography>
         </Box>
       </Container>

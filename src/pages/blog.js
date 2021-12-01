@@ -2,7 +2,7 @@ import React from 'react';
 import Blog from 'views/Blog';
 
 const BlogPage = () => {
-    return <Blog />;
+  return <Blog />;
 };
 
 export default BlogPage;

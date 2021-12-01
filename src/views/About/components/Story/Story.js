@@ -21,14 +21,18 @@ const Story = () => {
               Our story
             </Typography>
             <Typography component={'p'}>
-              Fusce pellentesque, ligula quis pharetra convallis, elit ipsum congue velit, sed tempor orci eros nec
-              magna. Pellentesque feugiat lacus ut magna suscipit porta. Praesent porta neque a auctor tincidunt. In
-              imperdiet lorem ut metus pellentesque, malesuada egestas mauris mattis.
+              Fusce pellentesque, ligula quis pharetra convallis, elit ipsum
+              congue velit, sed tempor orci eros nec magna. Pellentesque feugiat
+              lacus ut magna suscipit porta. Praesent porta neque a auctor
+              tincidunt. In imperdiet lorem ut metus pellentesque, malesuada
+              egestas mauris mattis.
               <br />
               <br />
-              Curabitur bibendum sem eu luctus egestas. Sed non tincidunt urna. Orci varius natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus. Fusce in nisi et ligula imperdiet pharetra. Donec viverra
-              augue a pharetra viverra. Donec porttitor at enim sed pellentesque.
+              Curabitur bibendum sem eu luctus egestas. Sed non tincidunt urna.
+              Orci varius natoque penatibus et magnis dis parturient montes,
+              nascetur ridiculus mus. Fusce in nisi et ligula imperdiet
+              pharetra. Donec viverra augue a pharetra viverra. Donec porttitor
+              at enim sed pellentesque.
             </Typography>
           </Box>
         </Grid>

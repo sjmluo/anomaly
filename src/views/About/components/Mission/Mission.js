@@ -28,9 +28,11 @@ const Mission = () => {
               Our mission
             </Typography>
             <Typography component={'p'} color={'text.secondary'}>
-              Nulla et pharetra tellus. Etiam commodo pellentesque rhoncus. Curabitur lobortis a turpis quis gravida.
-              Integer ultricies risus sed enim luctus, quis maximus eros consectetur. Class aptent taciti sociosqu ad
-              litora torquent per conubia nostra, per inceptos himenaeos.
+              Nulla et pharetra tellus. Etiam commodo pellentesque rhoncus.
+              Curabitur lobortis a turpis quis gravida. Integer ultricies risus
+              sed enim luctus, quis maximus eros consectetur. Class aptent
+              taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
             </Typography>
           </Box>
         </Grid>
@@ -47,9 +49,11 @@ const Mission = () => {
               Our philosophy
             </Typography>
             <Typography component={'p'} color={'text.secondary'}>
-              Integer et faucibus dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Duis eu ligula iaculis, vehicula orci non, facilisis lorem. Mauris euismod imperdiet leo
-              suscipit sodales. Phasellus dignissim mollis sapien, sed tincidunt nisi auctor eget.
+              Integer et faucibus dolor. Orci varius natoque penatibus et magnis
+              dis parturient montes, nascetur ridiculus mus. Duis eu ligula
+              iaculis, vehicula orci non, facilisis lorem. Mauris euismod
+              imperdiet leo suscipit sodales. Phasellus dignissim mollis sapien,
+              sed tincidunt nisi auctor eget.
             </Typography>
           </Box>
         </Grid>

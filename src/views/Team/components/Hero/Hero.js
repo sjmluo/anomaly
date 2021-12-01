@@ -16,19 +16,15 @@ const Hero = () => {
           }}
         >
           We are{' '}
-            <Typography
-                color={'primary'}
-                component={'span'}
-                variant={'inherit'}
-            >
-                <Typed
-                    strings={['mattis.', 'elementum.', 'pulvinar.']}
-                    typeSpeed={80}
-                    backSpeed={50}
-                    backDelay={1500}
-                    loop={true}
-                />
-            </Typography>
+          <Typography color={'primary'} component={'span'} variant={'inherit'}>
+            <Typed
+              strings={['mattis.', 'elementum.', 'pulvinar.']}
+              typeSpeed={80}
+              backSpeed={50}
+              backDelay={1500}
+              loop={true}
+            />
+          </Typography>
         </Typography>
       </Box>
     </Box>

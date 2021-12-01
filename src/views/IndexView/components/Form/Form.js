@@ -4,11 +4,9 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material/styles';
 
 const validationSchema = yup.object({
   firstName: yup
@@ -35,7 +33,6 @@ const validationSchema = yup.object({
 });
 
 const Contact = () => {
-  const theme = useTheme();
 
   const initialValues = {
     firstName: '',
@@ -58,7 +55,7 @@ const Contact = () => {
     <Box maxWidth={600} margin={'0 auto'}>
       <Box marginBottom={4}>
         <Typography
-          color='#F178B6'
+          color="#F178B6"
           variant={'h3'}
           sx={{ fontWeight: 700 }}
           align={'center'}
@@ -161,38 +158,38 @@ const Contact = () => {
             {/*  <Divider />*/}
             {/*</Grid>*/}
             {/*<Grid item container justifyContent={'center'} xs={12}>*/}
-              {/*<Box>*/}
-              {/*  <Typography component="p" variant="body2" align="left">*/}
-              {/*    By clicking on "submit" you agree to our{' '}*/}
-              {/*    <Box*/}
-              {/*      component="a"*/}
-              {/*      href=""*/}
-              {/*      color={theme.palette.text.primary}*/}
-              {/*      fontWeight={'700'}*/}
-              {/*    >*/}
-              {/*      Privacy Policy*/}
-              {/*    </Box>*/}
-              {/*    ,{' '}*/}
-              {/*    <Box*/}
-              {/*      component="a"*/}
-              {/*      href=""*/}
-              {/*      color={theme.palette.text.primary}*/}
-              {/*      fontWeight={'700'}*/}
-              {/*    >*/}
-              {/*      Data Policy*/}
-              {/*    </Box>{' '}*/}
-              {/*    and{' '}*/}
-              {/*    <Box*/}
-              {/*      component="a"*/}
-              {/*      href=""*/}
-              {/*      color={theme.palette.text.primary}*/}
-              {/*      fontWeight={'700'}*/}
-              {/*    >*/}
-              {/*      Cookie Policy*/}
-              {/*    </Box>*/}
-              {/*    .*/}
-              {/*  </Typography>*/}
-              {/*</Box>*/}
+            {/*<Box>*/}
+            {/*  <Typography component="p" variant="body2" align="left">*/}
+            {/*    By clicking on "submit" you agree to our{' '}*/}
+            {/*    <Box*/}
+            {/*      component="a"*/}
+            {/*      href=""*/}
+            {/*      color={theme.palette.text.primary}*/}
+            {/*      fontWeight={'700'}*/}
+            {/*    >*/}
+            {/*      Privacy Policy*/}
+            {/*    </Box>*/}
+            {/*    ,{' '}*/}
+            {/*    <Box*/}
+            {/*      component="a"*/}
+            {/*      href=""*/}
+            {/*      color={theme.palette.text.primary}*/}
+            {/*      fontWeight={'700'}*/}
+            {/*    >*/}
+            {/*      Data Policy*/}
+            {/*    </Box>{' '}*/}
+            {/*    and{' '}*/}
+            {/*    <Box*/}
+            {/*      component="a"*/}
+            {/*      href=""*/}
+            {/*      color={theme.palette.text.primary}*/}
+            {/*      fontWeight={'700'}*/}
+            {/*    >*/}
+            {/*      Cookie Policy*/}
+            {/*    </Box>*/}
+            {/*    .*/}
+            {/*  </Typography>*/}
+            {/*</Box>*/}
             {/*</Grid>*/}
           </Grid>
         </form>

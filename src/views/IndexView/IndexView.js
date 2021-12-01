@@ -1,15 +1,10 @@
 import React, { useEffect } from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import NoSsr from '@mui/material/NoSsr';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import {
-  Template,
-  Form,
-} from './components';
-
+import { Template, Form } from './components';
 
 const IndexView = () => {
   useEffect(() => {
@@ -25,18 +20,6 @@ const IndexView = () => {
 
     jarallaxInit();
   });
-
-  const scrollTo = (id) => {
-    setTimeout(() => {
-      const element = document.querySelector(`#${id}`);
-      if (!element) {
-        return;
-      }
-
-      window.scrollTo({ left: 0, top: element.offsetTop, behavior: 'smooth' });
-    });
-  };
-
   const theme = useTheme();
 
   const styles = (bgImage) => ({
@@ -56,9 +39,7 @@ const IndexView = () => {
     filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
   });
 
-
-
-    return (
+  return (
     <Main>
       <Box
         className={'jarallax'}
@@ -123,7 +104,7 @@ const IndexView = () => {
         display={'flex'}
         alignItems={'center'}
         bgcolor={'alternate.main'}
-        id={"contact-us"}
+        id={'contact-us'}
       >
         <Container>
           <Form />

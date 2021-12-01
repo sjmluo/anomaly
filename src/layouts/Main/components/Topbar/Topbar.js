@@ -6,15 +6,12 @@ import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { NavItem } from './components';
-import {ThemeModeToggler} from "../index";
+import { ThemeModeToggler } from '../index';
 
-const Topbar = ({ onSidebarOpen, pages, colorInvert = false , onContactUs}) => {
+const Topbar = ({ onSidebarOpen, pages, colorInvert = false, onContactUs }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
-  const {
-    aboutUs: aboutUs,
-    ourWork: ourWork,
-  } = pages;
+  const { aboutUs: aboutUs, ourWork: ourWork } = pages;
 
   return (
     <Box
@@ -58,7 +55,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false , onContactUs}) => {
             colorInvert={colorInvert}
           />
         </Box>
-        <ThemeModeToggler/>
+        <ThemeModeToggler />
         <Box marginLeft={4}>
           <Button
             variant="contained"
