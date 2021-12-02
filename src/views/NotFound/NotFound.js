@@ -41,25 +41,12 @@ const NotFound = () => {
             >
               <Box>
                 <Typography
-                  variant="h1"
-                  component={'h1'}
-                  align={isMd ? 'left' : 'center'}
-                  sx={{ fontWeight: 700 }}
-                >
-                  404
-                </Typography>
-                <Typography
                   variant="h6"
                   component="p"
                   color="text.secondary"
                   align={isMd ? 'left' : 'center'}
                 >
                   Oops! Looks like you followed a bad link.
-                  <br />
-                  If you think this is a problem with us, please{' '}
-                  <Link href={''} underline="none">
-                    tell us
-                  </Link>
                 </Typography>
                 <Box
                   marginTop={4}
@@ -83,7 +70,7 @@ const NotFound = () => {
                 <Box
                   component={'img'}
                   src={
-                    'https://assets.maccarianagency.com/svg/illustrations/drawkit-illustration6.svg'
+                    'https://raw.githubusercontent.com/ericfzhu/demo/e49718beec54be5614f8164c9f8707baaa88a5a6/src/images/404.svg'
                   }
                   width={1}
                   height={1}
