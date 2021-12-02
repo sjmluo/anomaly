@@ -48,7 +48,7 @@ const Story = () => {
             <Box
               component={'img'}
               src={
-                'https://assets.maccarianagency.com/svg/illustrations/drawkit-illustration1.svg'
+                'https://raw.githubusercontent.com/ericfzhu/demo/0973a20b0fb6e1db873feebfdfc2284e193ab495/src/images/processing.svg'
               }
               width={1}
               height={1}
