@@ -4,7 +4,8 @@ import Box from '@mui/material/Box';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Template, Form } from './components';
+import { Template } from './components';
+import { Form } from '../../components/Form'
 
 const IndexView = () => {
   useEffect(() => {

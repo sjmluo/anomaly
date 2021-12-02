@@ -4,7 +4,8 @@ import Divider from '@mui/material/Divider';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Articles, Form } from './components';
+import { Articles } from './components';
+import { Form } from '../../components/Form'
 
 const Blog = () => {
 

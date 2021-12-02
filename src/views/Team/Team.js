@@ -4,7 +4,8 @@ import { useTheme } from '@mui/material/styles';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Hero, Main as MainSection, Form } from './components';
+import { Hero, Main as MainSection } from './components';
+import { Form } from '../../components/Form'
 
 const Team = () => {
   const theme = useTheme();
