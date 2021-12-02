@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles';
 
 import NavItem from './components/NavItem';
 
-const SidebarNav = ({ pages, onContactUs }) => {
+const SidebarNav = ({ pages, onContactUs, onClose }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
 
@@ -41,29 +41,6 @@ const SidebarNav = ({ pages, onContactUs }) => {
         <Box>
           <NavItem title={'Our Work'} items={ourWork} />
         </Box>
-        {/*<Box>*/}
-        {/*  <NavItem title={'Pages'} items={secondaryPages} />*/}
-        {/*</Box>*/}
-        {/*<Box>*/}
-        {/*  <NavItem title={'Account'} items={accountPages} />*/}
-        {/*</Box>*/}
-        {/*<Box>*/}
-        {/*  <NavItem title={'Blog'} items={blogPages} />*/}
-        {/*</Box>*/}
-        {/*<Box>*/}
-        {/*  <NavItem title={'Portfolio'} items={portfolioPages} />*/}
-        {/*</Box>*/}
-        {/*<Box marginTop={2}>*/}
-        {/*  <Button*/}
-        {/*    size={'large'}*/}
-        {/*    variant="outlined"*/}
-        {/*    fullWidth*/}
-        {/*    component="a"*/}
-        {/*    href="/docs/introduction"*/}
-        {/*  >*/}
-        {/*    Documentation*/}
-        {/*  </Button>*/}
-        {/*</Box>*/}
         <Box marginTop={2}>
           <Button
             size={'large'}
@@ -72,8 +49,10 @@ const SidebarNav = ({ pages, onContactUs }) => {
             fullWidth
             component="a"
             target="_self"
-            // href="/#contact-us"
-            onClick={() => onContactUs()}
+            onClick={() => {
+              onContactUs();
+              onClose();
+            }}
           >
             Contact Us
           </Button>
