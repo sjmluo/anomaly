@@ -7,14 +7,14 @@ export const light = {
   mode: 'light',
   primary: {
     main: '#F178B6',
-    light: '#F178B6',
-    dark: '#B93C7C',
+    light: '#FDCAD5',
+    dark: '#AD3C8D',
     contrastText: '#fff',
   },
   secondary: {
-    light: '#ffb74d',
-    main: '#f9b934',
-    dark: '#FF9800',
+    light: '#B0E1FE',
+    main: '#3B97F9',
+    dark: '#1D57B3',
     contrastText: 'rgba(0, 0, 0, 0.87)',
   },
   text: {
@@ -48,9 +48,9 @@ export const dark = {
     contrastText: '#fff',
   },
   secondary: {
-    light: '#FFEA41',
-    main: '#FFE102',
-    dark: '#DBBE01',
+    light: '#B0E1FE',
+    main: '#3B97F9',
+    dark: '#1D57B3',
     contrastText: 'rgba(0, 0, 0, 0.87)',
   },
   text: {
