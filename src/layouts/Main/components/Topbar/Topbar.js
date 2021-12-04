@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link, Button } from 'gatsby-theme-material-ui';
+
 
 import { NavItem } from './components';
 import { ThemeModeToggler } from '../index';
@@ -20,10 +22,10 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, onContactUs }) => {
       alignItems={'center'}
       width={1}
     >
-      <Box
+      <Link
         display={'flex'}
-        component="a"
-        href="/"
+        // component="a"
+        to="/"
         title="template title"
         width={{ xs: 100, md: 120 }}
       >
@@ -37,7 +39,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, onContactUs }) => {
           height={0.5}
           width={0.5}
         />
-      </Box>
+      </Link>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box marginLeft={4}>
           <NavItem

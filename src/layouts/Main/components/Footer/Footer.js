@@ -1,7 +1,8 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
+import { Link } from 'gatsby-theme-material-ui';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 
@@ -20,7 +21,7 @@ const Footer = () => {
           flexDirection={{ xs: 'column', sm: 'row' }}
         >
           <Box display={'flex'} component="a" width={200}>
-            <Box display={'flex'} component="a" width={80} href="/">
+            <Link display={'flex'} width={80} to="/">
               <Box
                 component={'img'}
                 src={
@@ -32,12 +33,13 @@ const Footer = () => {
                 width={1}
                 title="website title"
               />
-            </Box>
+            </Link>
             <Box
               display={'flex'}
               component="a"
               width={40}
               href="https://www.linkedin.com/"
+              target="_blank"
               marginTop={0.25}
               marginLeft={4}
             >
@@ -54,6 +56,7 @@ const Footer = () => {
               component="a"
               width={40}
               href="https://www.twitter.com/"
+              target="_blank"
               marginTop={0.25}
               marginLeft={2}
             >
@@ -69,6 +72,7 @@ const Footer = () => {
               component="a"
               width={40}
               href="https://www.github.com/"
+              target="_blank"
               marginTop={0.25}
               marginLeft={2}
             >
@@ -84,8 +88,8 @@ const Footer = () => {
             <Box marginTop={1} marginRight={4}>
               <Link
                 underline="none"
-                component="a"
-                href="/about"
+                // component="a"
+                to="/about"
                 color="text.primary"
                 variant={'subtitle2'}
               >
@@ -95,8 +99,8 @@ const Footer = () => {
             <Box marginTop={1} marginRight={4}>
               <Link
                 underline="none"
-                component="a"
-                href="/team"
+                // component="a"
+                to="/team"
                 color="text.primary"
                 variant={'subtitle2'}
               >
@@ -106,8 +110,8 @@ const Footer = () => {
             <Box marginTop={1}>
               <Link
                 underline="none"
-                component="a"
-                href="/blog"
+                // component="a"
+                to="/blog"
                 color="text.primary"
                 variant={'subtitle2'}
               >

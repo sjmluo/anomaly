@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
+import { Button } from 'gatsby-theme-material-ui';
 import { alpha, useTheme } from '@mui/material/styles';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
@@ -88,8 +89,8 @@ const NavItem = ({ title, id, items, colorInvert = false }) => {
           {items.map((p, i) => (
             <Grid item key={i} xs={items.length > 12 ? 6 : 12}>
               <Button
-                component={'a'}
-                href={p.href}
+                // component={'a'}
+                to={p.href}
                 fullWidth
                 sx={{
                   justifyContent: 'flex-start',
