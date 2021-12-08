@@ -1,12 +1,31 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useTheme } from '@mui/material/styles';
+import { graphql } from 'gatsby';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
+
+export const pageQuery = graphql`
+  query MyQuery {
+    allContentfulBlogPost {
+      nodes {
+        body {
+          raw
+        }
+        contentful_id
+        date
+        url
+        author {
+          name
+        }
+      }
+    }
+  }
+`
 
 const mock = [
   {
