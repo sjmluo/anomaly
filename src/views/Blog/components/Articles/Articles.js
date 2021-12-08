@@ -1,7 +1,7 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useTheme } from '@mui/material/styles';
-import { graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
@@ -11,31 +11,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Button } from 'gatsby-theme-material-ui';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 
-export const pageQuery = graphql`
-    query {
-      allContentfulBlogPost {
-        nodes {
-          contentful_id
-          date
-          createdAt
-          author {
-            name
-          }
-          body {
-            raw
-          }
-          title
-          image {
-            gatsbyImageData(layout: FIXED, width: 75)
-          }
-          gatsbyPath(filePath: "/blog/{contentfulBlogPost.title}")
-        }
-      }
-    }
-`
-
 const Blog = ({ node }) => (
-    <Grid item xs={12} key={i}>
       <Box
           component={Card}
           width={1}
@@ -55,21 +31,21 @@ const Blog = ({ node }) => (
               },
             }}
         >
-            {node.image[0].gatsbyImageData && (
+            {node.image.gatsbyImageData && (
                 <Box
                     component={GatsbyImage}
                     height={1}
                     width={1}
-                    image={node.image[0].gatsbyImageData}
+                    image={node.image.gatsbyImageData}
                     effect="blur"
                     sx={{
                         objectFit: 'cover',
                         maxHeight: 200,
                         borderRadius: 2,
-                        filter:
-                            theme.palette.mode === 'dark'
-                                ? 'brightness(0.7)'
-                                : 'none',
+                        // filter:
+                        //     theme.palette.mode === 'dark'
+                        //         ? 'brightness(0.7)'
+                        //         : 'none',
                     }}
                 />
             )}
@@ -98,7 +74,7 @@ const Blog = ({ node }) => (
             </Typography>
           </Box>
           <Typography color="text.secondary">
-            {node.body}
+            {renderRichText(node.body)}
           </Typography>
           <Box marginTop={2} display={'flex'} justifyContent={'flex-end'}>
             <Button
@@ -127,7 +103,6 @@ const Blog = ({ node }) => (
           </Box>
         </CardContent>
       </Box>
-    </Grid>
 )
 
 const mock = [
@@ -171,105 +146,138 @@ const mock = [
 
 const Articles = () => {
   const theme = useTheme();
-  const blogNodes = this.props.data;
+  // const blogNodes = this.props.data;
   return (
-    <Box>
-      <Grid container spacing={4}>
-        {mock.map((item, i) => (
-          <Grid item xs={12} key={i}>
-            <Box
-              component={Card}
-              width={1}
-              height={1}
-              borderRadius={0}
-              boxShadow={0}
-              display={'flex'}
-              flexDirection={{ xs: 'column', md: 'row' }}
-              sx={{ backgroundImage: 'none', bgcolor: 'transparent' }}
-            >
-              <Box
-                sx={{
-                  width: { xs: 1, md: '30%' },
-                  '& .lazy-load-image-loaded': {
-                    height: 1,
-                    display: 'flex !important',
-                  },
-                }}
-              >
-                <Box
-                  component={LazyLoadImage}
-                  height={1}
-                  width={1}
-                  src={item.image}
-                  alt="..."
-                  effect="blur"
-                  sx={{
-                    objectFit: 'cover',
-                    maxHeight: 200,
-                    borderRadius: 2,
-                    filter:
-                      theme.palette.mode === 'dark'
-                        ? 'brightness(0.7)'
-                        : 'none',
-                  }}
-                />
-              </Box>
-              <CardContent
-                sx={{
-                  width: { xs: 1, md: '70%' },
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                }}
-              >
-                <Typography
-                  fontWeight={700}
-                  sx={{ textTransform: 'uppercase' }}
-                >
-                  {item.title}
-                </Typography>
-                <Box marginY={1}>
-                  <Typography
-                    variant={'caption'}
-                    color={'text.secondary'}
-                    component={'i'}
-                  >
-                    {item.author.name} - {item.date}
-                  </Typography>
-                </Box>
-                <Typography color="text.secondary">
-                  {item.description}
-                </Typography>
-                <Box marginTop={2} display={'flex'} justifyContent={'flex-end'}>
-                  <Button
-                    endIcon={
-                      <Box
-                        component={'svg'}
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        width={24}
-                        height={24}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </Box>
-                    }
-                  >
-                    Read More
-                  </Button>
-                </Box>
-              </CardContent>
-            </Box>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+      <StaticQuery query={graphql`
+        query {
+          allBlogPosts: allContentfulBlogPost {
+            nodes {
+              contentful_id
+              date
+              createdAt
+              author {
+                name
+              }
+              body {
+                raw
+              }
+              title
+              image {
+                gatsbyImageData(layout: FIXED, width: 75)
+              }
+              gatsbyPath(filePath: "/blog/{contentfulBlogPost.title}")
+              id
+            }
+          }
+        }
+    `}
+   render={data => (
+       <Box>
+           <Grid container spacing={4}>
+               {mock.map((item, i) => (
+                   <Grid item xs={12} key={i}>
+                       <Box
+                           component={Card}
+                           width={1}
+                           height={1}
+                           borderRadius={0}
+                           boxShadow={0}
+                           display={'flex'}
+                           flexDirection={{ xs: 'column', md: 'row' }}
+                           sx={{ backgroundImage: 'none', bgcolor: 'transparent' }}
+                       >
+                           <Box
+                               sx={{
+                                   width: { xs: 1, md: '30%' },
+                                   '& .lazy-load-image-loaded': {
+                                       height: 1,
+                                       display: 'flex !important',
+                                   },
+                               }}
+                           >
+                               <Box
+                                   component={LazyLoadImage}
+                                   height={1}
+                                   width={1}
+                                   src={item.image}
+                                   alt="..."
+                                   effect="blur"
+                                   sx={{
+                                       objectFit: 'cover',
+                                       maxHeight: 200,
+                                       borderRadius: 2,
+                                       filter:
+                                           theme.palette.mode === 'dark'
+                                               ? 'brightness(0.7)'
+                                               : 'none',
+                                   }}
+                               />
+                           </Box>
+                           <CardContent
+                               sx={{
+                                   width: { xs: 1, md: '70%' },
+                                   display: 'flex',
+                                   flexDirection: 'column',
+                                   justifyContent: 'center',
+                               }}
+                           >
+                               <Typography
+                                   fontWeight={700}
+                                   sx={{ textTransform: 'uppercase' }}
+                               >
+                                   {item.title}
+                               </Typography>
+                               <Box marginY={1}>
+                                   <Typography
+                                       variant={'caption'}
+                                       color={'text.secondary'}
+                                       component={'i'}
+                                   >
+                                       {item.author.name} - {item.date}
+                                   </Typography>
+                               </Box>
+                               <Typography color="text.secondary">
+                                   {item.description}
+                               </Typography>
+                               <Box marginTop={2} display={'flex'} justifyContent={'flex-end'}>
+                                   <Button
+                                       endIcon={
+                                           <Box
+                                               component={'svg'}
+                                               xmlns="http://www.w3.org/2000/svg"
+                                               fill="none"
+                                               viewBox="0 0 24 24"
+                                               stroke="currentColor"
+                                               width={24}
+                                               height={24}
+                                           >
+                                               <path
+                                                   strokeLinecap="round"
+                                                   strokeLinejoin="round"
+                                                   strokeWidth={2}
+                                                   d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                               />
+                                           </Box>
+                                       }
+                                   >
+                                       Read More
+                                   </Button>
+                               </Box>
+                           </CardContent>
+                       </Box>
+                   </Grid>
+               ))}
+           </Grid>
+           <Grid container spacing={4}>
+               {data.allBlogPosts.nodes.map((node, i) => (
+                   <Grid item xs={12} key={i}>
+                    <Blog node={node} key={node.id}/>
+                   </Grid>
+               ))}
+           </Grid>
+       </Box>
+   )}
+   />
   );
 };
 
