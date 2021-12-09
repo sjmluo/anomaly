@@ -6,7 +6,6 @@ import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, Button } from 'gatsby-theme-material-ui';
 
-
 import { NavItem } from './components';
 import { ThemeModeToggler } from '../index';
 
@@ -90,7 +89,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, onContactUs }) => {
           >
             <MenuIcon />
           </Button>
-      </Box>
+        </Box>
       </Box>
     </Box>
   );

@@ -33,7 +33,6 @@ const validationSchema = yup.object({
 });
 
 const Contact = () => {
-
   const initialValues = {
     firstName: '',
     lastName: '',

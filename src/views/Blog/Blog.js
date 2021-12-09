@@ -5,10 +5,9 @@ import Divider from '@mui/material/Divider';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import { Articles } from './components';
-import { Form } from '../../components/Form'
+import { Form } from '../../components/Form';
 
 const Blog = () => {
-
   return (
     <Main>
       <Box bgcolor={'main'}>
