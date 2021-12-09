@@ -62,7 +62,7 @@ const Blog = ({ node, theme }) => (
           color={'text.secondary'}
           component={'i'}
         >
-          {node.author.name} - {node.date}
+          {node.author.name} - {node.createdAt}
         </Typography>
       </Box>
       <Typography color="text.secondary">
@@ -106,7 +106,7 @@ const Articles = () => {
         query {
           allBlogPosts: allContentfulBlogPost {
             nodes {
-              date(formatString: "DD MMMM YYYY")
+              createdAt(formatString: "DD MMMM YYYY")
               author {
                 name
               }
