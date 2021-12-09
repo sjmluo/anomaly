@@ -24,7 +24,11 @@ const Sidebar = ({ pages, open, variant, onClose, onContactUs }) => {
           padding: 1,
         }}
       >
-        <SidebarNav pages={pages} onContactUs={() => onContactUs()} onClose={() => onClose()} />
+        <SidebarNav
+          pages={pages}
+          onContactUs={() => onContactUs()}
+          onClose={() => onClose()}
+        />
       </Box>
     </Drawer>
   );

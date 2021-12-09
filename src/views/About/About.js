@@ -5,7 +5,7 @@ import Divider from '@mui/material/Divider';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import { Hero, Story, Mission } from './components';
-import { Form } from '../../components/Form'
+import { Form } from '../../components/Form';
 
 const About = () => {
   return (
