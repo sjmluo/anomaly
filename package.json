@@ -33,6 +33,7 @@
     ]
   },
   "dependencies": {
+    "@contentful/rich-text-types": "^15.7.0",
     "@emotion/react": "^11.7.0",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.6.0",
@@ -42,6 +43,7 @@
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.0",
     "card-validator": "^8.1.1",
+    "contentful": "^9.1.5",
     "core-js": "^3.19.2",
     "deepmerge": "^4.2.2",
     "dotenv": "^10.0.0",
