@@ -1,5 +1,4 @@
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useTheme } from '@mui/material/styles';
 import { graphql, StaticQuery } from 'gatsby';
 import Box from '@mui/material/Box';
@@ -98,44 +97,6 @@ const Blog = ({ node, theme }) => (
   </Box>
 );
 
-const mock = [
-  {
-    image:
-      'https://images.unsplash.com/photo-1555432384-3b2fa7b650c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    title: 'All about K-Means Clustering',
-    author: {
-      name: 'Eric Zhu',
-      avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
-    },
-    date: '01 Dec',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1602464729960-f95937746b68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    title: 'Gaussian Mixture Models Explained',
-    author: {
-      name: 'Eric Zhu',
-      avatar: 'https://assets.maccarianagency.com/avatars/img2.jpg',
-    },
-    date: '30 Nov',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1310&q=80',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    title: 'What is Spectral Clustering?',
-    author: {
-      name: 'Eric Zhu',
-      avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
-    },
-    date: '28 Nov',
-  },
-];
 
 const Articles = () => {
   const theme = useTheme();
@@ -145,21 +106,15 @@ const Articles = () => {
         query {
           allBlogPosts: allContentfulBlogPost {
             nodes {
-              contentful_id
-              date
-              createdAt
+              date(formatString: "DD MMMM YYYY")
               author {
                 name
-              }
-              body {
-                raw
               }
               title
               image {
                 gatsbyImageData(width: 2000)
               }
               gatsbyPath(filePath: "/blog/{contentfulBlogPost.title}")
-              id
               description {
                 description
               }
