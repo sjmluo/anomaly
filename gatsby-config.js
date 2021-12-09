@@ -11,6 +11,7 @@ module.exports = {
     'gatsby-plugin-mui-emotion',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-top-layout',
+    'gatsby-plugin-image',
     {
       resolve: `gatsby-source-contentful`,
       options: {
