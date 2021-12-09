@@ -6,7 +6,7 @@
   "author": "Eric Zhu",
   "scripts": {
     "develop": "gatsby develop",
-    "prettier:fix": "prettier './src/**/*.js' --write",
+    "prettier:fix": "prettier \"./src/**/*.js\" --write",
     "eslint:fix": "eslint ./src --fix",
     "build": "cross-env GENERATE_SOURCEMAP=false gatsby build",
     "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
