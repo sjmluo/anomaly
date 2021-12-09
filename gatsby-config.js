@@ -18,6 +18,19 @@ module.exports = {
         spaceId: `j1i7j7n6v3mr`,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       }
-    }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`
+            }
+          }
+        ],
+      },
+    },
   ],
 };
