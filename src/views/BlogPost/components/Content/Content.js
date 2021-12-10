@@ -11,6 +11,9 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
+import "katex/dist/katex.min.css"
+import katex from "rehype-katex";
+
 
 const Content = ({ data }) => {
   const theme = useTheme();
@@ -21,7 +24,12 @@ const Content = ({ data }) => {
         renderMark: {
             [MARKS.BOLD]: (text) => <b><font color={theme.palette.primary.main}>{text}</font></b>,
             [MARKS.ITALIC]: (text) => <i><font color={theme.palette.primary.main}>{text}</font></i>,
-            [MARKS.UNDERLINE]: (text) => <u>{text}</u>
+            [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
+            [MARKS.CODE]: (text) => (
+                katex(<span class={'math math-inline'}>
+                    {text}
+                </span>)
+            ),
         },
         renderNode: {
             [INLINES.HYPERLINK]: (node, children) => (
@@ -101,6 +109,9 @@ const Content = ({ data }) => {
     <Box>
       <Box paddingX={{ xs: 0, sm: 4, md: 6 }}>
         {renderRichText(data.body, options)}
+          <h1>
+              $a^2 + b^2 = c^2$
+          </h1>
       </Box>
       <Box paddingY={4}>
         <Divider />

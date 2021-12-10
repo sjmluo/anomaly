@@ -23,12 +23,13 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+            `gatsby-remark-mathjax`,
           {
             resolve: `gatsby-remark-katex`,
             options: {
               strict: `ignore`
             }
-          }
+          },
         ],
       },
     },

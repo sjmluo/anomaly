@@ -2,10 +2,13 @@ import React from 'react';
 import BlogPost from 'views/BlogPost';
 import { graphql } from "gatsby";
 
+import "katex/dist/katex.min.css"
+import katex from "rehype-katex";
+
+
 const BlogPostPage = ({ data }) => {
     return <BlogPost data={data.contentfulBlogPost}/>;
 }
-
 
 export default BlogPostPage;
 
