@@ -28,10 +28,12 @@ export const query = graphql`
       body {
         raw
         references {
-          contentful_id
-          description
-          gatsbyImageData(width: 1000)
-          __typename
+          ... on ContentfulAsset {
+            contentful_id
+            description
+            gatsbyImageData(width: 1000)
+            __typename
+          }
         }
       }
     }

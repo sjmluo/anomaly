@@ -61,6 +61,9 @@ const Content = ({ data }) => {
       ),
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
         const { gatsbyImageData, description } = node.data.target;
+        if (description === "dummy") {
+          return
+        }
         return (
           <GatsbyImage image={getImage(gatsbyImageData)} alt={description} />
         );
