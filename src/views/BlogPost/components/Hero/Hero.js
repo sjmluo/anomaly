@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
-import Avatar from '@mui/material/Avatar';
 
 import Container from 'components/Container';
 
@@ -76,7 +76,7 @@ const Hero = ({ data }) => {
               marginBottom: 2,
             }}
           >
-              {data.title}
+            {data.title}
           </Typography>
           <Box display={'flex'} alignItems={'center'}>
             <ListItemText
@@ -96,6 +96,16 @@ const Hero = ({ data }) => {
       </Container>
     </Box>
   );
+};
+
+Hero.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    author: PropTypes.shape({
+      name: PropTypes.string
+    }),
+    createdAt: PropTypes.string
+  })
 };
 
 export default Hero;

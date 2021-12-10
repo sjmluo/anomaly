@@ -97,6 +97,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, onContactUs }) => {
 
 Topbar.propTypes = {
   onSidebarOpen: PropTypes.func,
+  onContactUs: PropTypes.func,
   pages: PropTypes.object,
   colorInvert: PropTypes.bool,
 };
