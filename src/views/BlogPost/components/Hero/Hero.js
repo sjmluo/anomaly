@@ -3,7 +3,6 @@ import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
-import Avatar from '@mui/material/Avatar';
 
 import Container from 'components/Container';
 
@@ -76,7 +75,7 @@ const Hero = ({ data }) => {
               marginBottom: 2,
             }}
           >
-              {data.title}
+            {data.title}
           </Typography>
           <Box display={'flex'} alignItems={'center'}>
             <ListItemText

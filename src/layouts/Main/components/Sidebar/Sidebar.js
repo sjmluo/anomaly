@@ -36,6 +36,7 @@ const Sidebar = ({ pages, open, variant, onClose, onContactUs }) => {
 
 Sidebar.propTypes = {
   onClose: PropTypes.func,
+  onContactUs: PropTypes.func,
   open: PropTypes.bool.isRequired,
   variant: PropTypes.string.isRequired,
   pages: PropTypes.object.isRequired,

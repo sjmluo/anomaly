@@ -97,7 +97,6 @@ const Blog = ({ node, theme }) => (
   </Box>
 );
 
-
 const Articles = () => {
   const theme = useTheme();
   return (
