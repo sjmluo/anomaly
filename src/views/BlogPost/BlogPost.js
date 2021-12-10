@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -39,6 +40,10 @@ const BlogArticle = ({ data }) => {
       </Box>
     </Main>
   );
+};
+
+BlogArticle.propTypes = {
+  data: PropTypes.object
 };
 
 export default BlogArticle;

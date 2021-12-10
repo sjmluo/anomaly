@@ -64,8 +64,8 @@ const SidebarNav = ({ pages, onContactUs, onClose }) => {
 
 SidebarNav.propTypes = {
   pages: PropTypes.object.isRequired,
-  onContactUs: PropTypes.object.isRequired,
-  onClose: PropTypes.object.isRequired,
+  onContactUs: PropTypes.func,
+  onClose: PropTypes.func,
 };
 
 export default SidebarNav;

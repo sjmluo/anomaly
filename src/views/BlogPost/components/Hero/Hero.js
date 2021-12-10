@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -95,6 +96,16 @@ const Hero = ({ data }) => {
       </Container>
     </Box>
   );
+};
+
+Hero.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    author: PropTypes.shape({
+      name: PropTypes.string
+    }),
+    createdAt: PropTypes.string
+  })
 };
 
 export default Hero;

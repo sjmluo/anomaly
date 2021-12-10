@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import { graphql, StaticQuery } from 'gatsby';
 import Box from '@mui/material/Box';
@@ -134,6 +135,28 @@ const Articles = () => {
       )}
     />
   );
+};
+
+Blog.propTypes = {
+  node: PropTypes.shape({
+    image: PropTypes.shape({
+      gatsbyImageData: PropTypes.object
+    }),
+    author: PropTypes.shape({
+      name: PropTypes.string
+    }),
+    createdAt: PropTypes.string,
+    description: PropTypes.shape({
+      description: PropTypes.string
+    }),
+    gatsbyPath: PropTypes.string,
+    title: PropTypes.string
+  }).isRequired,
+  theme: PropTypes.shape({
+    palette: PropTypes.shape({
+      mode: PropTypes.string
+    })
+  })
 };
 
 export default Articles;
