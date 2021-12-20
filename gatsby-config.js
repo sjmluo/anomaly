@@ -30,6 +30,13 @@ module.exports = {
               strict: `ignore`
             }
           },
+          {
+            resolve: `gatsby-remark-embed-gist`,
+            options: {
+              username: "ericfzhu",
+              gistDefaultCssInclude: true,
+            }
+          }
         ],
       },
     },

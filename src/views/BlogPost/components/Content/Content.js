@@ -27,7 +27,7 @@ const Content = ({ data }) => {
           <font color={theme.palette.primary.main}>{text}</font>
         </i>
       ),
-      [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
+      [MARKS.UNDERLINE]: (text) => <script src={text}/>,
       [MARKS.CODE]: (text) => <TeX math={text} />,
     },
     renderNode: {
@@ -41,19 +41,19 @@ const Content = ({ data }) => {
       [BLOCKS.HEADING_3]: (node, children) => <h3>{children}</h3>,
       [BLOCKS.HEADING_4]: (node, children) => <h4>{children}</h4>,
       [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
-      [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
+      [BLOCKS.HEADING_6]: (node, children) => <code><script src={children}/></code>,
 
       [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
       [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
 
       [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
-      [BLOCKS.PARAGRAPH]: (node, children) => {
-        if (node.content[0].value === '') {
-          return <br />;
-        } else {
-          return <p>{children}</p>;
-        }
-      },
+      // [BLOCKS.PARAGRAPH]: (node, children) => {
+      //   if (node.content[0].value === '') {
+      //     return <br />;
+      //   } else {
+      //     return <p>{children}</p>;
+      //   }
+      // },
       [BLOCKS.QUOTE]: (children) => (
         <blockquote>
           <>"{children.content[0].content[0].value}"</>
@@ -75,6 +75,7 @@ const Content = ({ data }) => {
       <Box paddingX={{ xs: 0, sm: 4, md: 6 }}>
         {renderRichText(data.body, options)}
       </Box>
+      <code>{`gist:weirdpattern/ce54fdb1e5621b5966e146026995b974#syntax.text`}</code>
       <Box paddingY={4}>
         <Divider />
       </Box>
