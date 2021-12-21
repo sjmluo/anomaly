@@ -12,6 +12,7 @@ module.exports = {
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-top-layout',
     'gatsby-plugin-image',
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -23,13 +24,37 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-            `gatsby-remark-mathjax`,
           {
             resolve: `gatsby-remark-katex`,
             options: {
               strict: `ignore`
             }
           },
+          {
+            resolve: `gatsby-remark-embed-gist`,
+            options: {
+              username: "ericfzhu",
+              gistDefaultCssInclude: true,
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            }
+          },
+          {
+            resolve: `gatsby-remark-embed-video`,
+            options: {
+              width: 800,
+              ratio: 1.77,
+              height: 400,
+              related: false,
+              noIframeBorder: true,
+              loadingStrategy: 'lazy',
+              iframeId: false,
+            }
+          }
         ],
       },
     },

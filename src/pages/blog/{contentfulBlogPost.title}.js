@@ -24,18 +24,12 @@ export const query = graphql`
         name
       }
       title
-      createdAt(formatString: "DD MMMM YYYY")
-      body {
-        raw
-        references {
-          ... on ContentfulAsset {
-            contentful_id
-            description
-            gatsbyImageData(width: 1000)
-            __typename
-          }
+      text {
+        childMarkdownRemark {
+          html
         }
       }
+      createdAt(formatString: "DD MMMM YYYY")
     }
   }
 `;
