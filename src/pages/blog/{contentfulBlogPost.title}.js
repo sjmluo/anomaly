@@ -24,6 +24,11 @@ export const query = graphql`
         name
       }
       title
+      text {
+        childMarkdownRemark {
+          html
+        }
+      }
       createdAt(formatString: "DD MMMM YYYY")
       body {
         raw
