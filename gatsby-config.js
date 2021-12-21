@@ -12,6 +12,7 @@ module.exports = {
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-top-layout',
     'gatsby-plugin-image',
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -34,6 +35,24 @@ module.exports = {
             options: {
               username: "ericfzhu",
               gistDefaultCssInclude: true,
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            }
+          },
+          {
+            resolve: `gatsby-remark-embed-video`,
+            options: {
+              width: 800,
+              ratio: 1.77,
+              height: 400,
+              related: false,
+              noIframeBorder: true,
+              loadingStrategy: 'lazy',
+              iframeId: false,
             }
           }
         ],
