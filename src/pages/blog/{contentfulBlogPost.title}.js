@@ -30,17 +30,6 @@ export const query = graphql`
         }
       }
       createdAt(formatString: "DD MMMM YYYY")
-      body {
-        raw
-        references {
-          ... on ContentfulAsset {
-            contentful_id
-            description
-            gatsbyImageData(width: 1000)
-            __typename
-          }
-        }
-      }
     }
   }
 `;
