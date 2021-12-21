@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
@@ -9,7 +8,6 @@ import Divider from '@mui/material/Divider';
 import 'katex/dist/katex.min.css';
 
 const Content = ({ data }) => {
-  const theme = useTheme();
   return (
     <Box>
       <Box paddingX={{ xs: 0, sm: 4, md: 6 }}>
@@ -39,7 +37,11 @@ const Content = ({ data }) => {
 
 Content.propTypes = {
   data: PropTypes.shape({
-    body: PropTypes.RenderRichTextData,
+    text: PropTypes.shape({
+        childMarkdownRemark: PropTypes.shape({
+            html: PropTypes.element
+        })
+    }),
     author: PropTypes.shape({
       name: PropTypes.string
     }),
