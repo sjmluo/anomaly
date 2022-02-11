@@ -7,45 +7,59 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 
+import {
+  mlin,
+  gvio,
+  lazzizi,
+  malamdari,
+  pcheema,
+  sluo,
+  twang,
+  ychin,
+} from '/src/images/people';
+
+
 const mock = [
   {
-    image:
-      'https://images.unsplash.com/photo-1555432384-3b2fa7b650c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    title: 'Lorem ipsum dolor sit amet,',
+    name: 'Simon Luo',
+    image: sluo,
+    role: 'Project Lead',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1602464729960-f95937746b68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80',
-    description: 'Excepteur sint occaecat cupidatat non proident',
-    title: 'Consectetur adipiscing elit',
+    name: 'Lamiae Azzizi',
+    image: lazzizi,
+    role: 'Project Personnel / Technical Lead',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1310&q=80',
-    description: 'Eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-    title: 'Labore et dolore magna aliqua',
+    name: 'Prasad Cheema',
+    image: pcheema,
+    role: 'Technical Lead',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
-    description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
-    title: 'Eiusmod tempor incididunt',
+    name: 'Gareth Vio',
+    image: gvio,
+    role: 'Technical Advisor',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-    description: 'At vero eos et accusamus et iusto odio dignissimos ducimus',
-    title: 'Sed ut perspiciatis',
+    name: 'Mehrisadat Makki Alamdari',
+    image: malamdari,
+    role: 'Technical Advisor',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1488554378835-f7acf46e6c98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
-    description:
-      'Qui blanditiis praesentium voluptatum deleniti atque corrupti',
-    title: 'Unde omnis iste natus',
+    name: 'Tony Wang',
+    image: twang,
+    role: 'Engineering Lead',
   },
+  {
+    name: 'Yee Chin',
+    image: ychin,
+    role: 'Engineering Lead',
+  },
+  {
+    name: 'Michael Lin',
+    image: mlin,
+    role: 'placeholder',
+  }
 ];
 
 const Main = () => {
@@ -77,7 +91,7 @@ const Main = () => {
               >
                 <CardMedia
                   image={item.image}
-                  title={item.title}
+                  title={item.name}
                   sx={{
                     height: { xs: 340, md: 400 },
                     filter:
@@ -88,10 +102,10 @@ const Main = () => {
                 />
                 <Box component={CardContent}>
                   <Typography variant={'h6'} fontWeight={700} gutterBottom>
-                    {item.title}
+                    {item.name}
                   </Typography>
                   <Typography variant={'body2'} color="text.secondary">
-                    {item.description}
+                    {item.role}
                   </Typography>
                 </Box>
               </Box>
