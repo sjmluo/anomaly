@@ -11,8 +11,8 @@ const BlogPostPage = ({ data }) => {
 
 BlogPostPage.propTypes = {
   data: PropTypes.shape({
-    contentfulBlogPost: PropTypes.object
-  })
+    contentfulBlogPost: PropTypes.object,
+  }),
 };
 
 export default BlogPostPage;

@@ -102,10 +102,10 @@ Hero.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string,
     author: PropTypes.shape({
-      name: PropTypes.string
+      name: PropTypes.string,
     }),
-    createdAt: PropTypes.string
-  })
+    createdAt: PropTypes.string,
+  }),
 };
 
 export default Hero;
