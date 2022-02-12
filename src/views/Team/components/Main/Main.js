@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 
-import { Popup } from './components';
+import { MainBox } from './components';
 
 import {
   mlin,
@@ -49,14 +43,14 @@ const people = [
     image: gvio,
     role: 'Technical Advisor',
     about:
-      'Dr Gareth A. Vio received his bachelor\'s degree in aerospace engineering, and PhD degree in aeronautical engineering from The University of Manchester in 1999 and 2005 respectively. He is currently a Senior Lecturer with the School of Aerospace, Mechanical and Mechatronic Engineering at The University of Sydney. His research interests include multidisciplinary design and topology optimisation, shock wave/boundary layer interaction, nonlinear structural dynamics and energy harvesting.',
+      "Dr Gareth A. Vio received his bachelor's degree in aerospace engineering, and PhD degree in aeronautical engineering from The University of Manchester in 1999 and 2005 respectively. He is currently a Senior Lecturer with the School of Aerospace, Mechanical and Mechatronic Engineering at The University of Sydney. His research interests include multidisciplinary design and topology optimisation, shock wave/boundary layer interaction, nonlinear structural dynamics and energy harvesting.",
   },
   {
     name: 'Mehrisadat Makki Alamdari',
     image: malamdari,
     role: 'Technical Advisor',
     about:
-      'Dr. Makki Alamdari is a Senior Lecturer in the UNSW, School of Civil and Environmental Engineering. She is the recipient of the highly competitive ARC Discovery Early Career Research Award (DECRA). Dr. Alamdari is also the winner of the prestigious JSPS Award (Japan Society for Promotion of Science). An award-winning scholar, Mehri is on the Executive of the Australian Network of Structural Health Monitoring (ANSHM), a member of The International Society for Structural Health Monitoring of Intelligent Infrastructure (ISHMII) and a steering committee member in the Australia, New Zealand and Oceania Researchers in Japan Network (ANZOR Japan Network). Prior to joining UNSW, she was a research fellow in Data61|CSIRO (since 2015) working on structural health monitoring of the iconic Sydney Harbour Bridge. Dr. Alamdari\'s expertise is structural health monitoring, vibration analysis and testing, inverse dynamic problems and signal processing. ',
+      "Dr. Makki Alamdari is a Senior Lecturer in the UNSW, School of Civil and Environmental Engineering. She is the recipient of the highly competitive ARC Discovery Early Career Research Award (DECRA). Dr. Alamdari is also the winner of the prestigious JSPS Award (Japan Society for Promotion of Science). An award-winning scholar, Mehri is on the Executive of the Australian Network of Structural Health Monitoring (ANSHM), a member of The International Society for Structural Health Monitoring of Intelligent Infrastructure (ISHMII) and a steering committee member in the Australia, New Zealand and Oceania Researchers in Japan Network (ANZOR Japan Network). Prior to joining UNSW, she was a research fellow in Data61|CSIRO (since 2015) working on structural health monitoring of the iconic Sydney Harbour Bridge. Dr. Alamdari's expertise is structural health monitoring, vibration analysis and testing, inverse dynamic problems and signal processing. ",
   },
   {
     name: 'Tony Wang',
@@ -83,7 +77,6 @@ const people = [
 
 const Main = () => {
   const theme = useTheme();
-  const [open, setOpen] = useState(false);
 
   return (
     <Box>
@@ -103,60 +96,7 @@ const Main = () => {
                 },
               }}
             >
-              <Box
-                component={Card}
-                width={1}
-                height={1}
-                display={'flex'}
-                flexDirection={'column'}
-              >
-                <CardMedia
-                  image={item.image}
-                  title={item.name}
-                  sx={{
-                    height: { xs: 340, md: 400 },
-                    filter:
-                      theme.palette.mode === 'dark'
-                        ? 'brightness(0.7)'
-                        : 'none',
-                  }}
-                />
-                <Box component={CardContent}>
-                  <Typography variant={'h6'} fontWeight={700} gutterBottom>
-                    {item.name}
-                  </Typography>
-                  <Typography variant={'body2'} color="text.secondary">
-                    {item.role}
-                  </Typography>
-                </Box>
-                <Box flexGrow={1} />
-                <Box component={CardActions} justifyContent={'flex-start'}>
-                  <Button
-                    size="large"
-                    endIcon={
-                      <svg
-                        width={16}
-                        height={16}
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </svg>
-                    }
-                    onClick={() => setOpen(true)}
-                  >
-                    Bio
-                  </Button>
-                  <Popup open={open} onClose={() => setOpen(false)} item={item} image={item.image} />
-                </Box>
-              </Box>
+              <MainBox item={item}/>
             </Box>
           </Grid>
         ))}

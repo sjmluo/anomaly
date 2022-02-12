@@ -5,8 +5,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Dialog from '@mui/material/Dialog';
 
-import { Image, Details } from './components';
-import CardMedia from "@mui/material/CardMedia";
+import { Details } from './components';
+import CardMedia from '@mui/material/CardMedia';
 
 const Popup = ({ onClose, open, item, image }) => {
   const theme = useTheme();
@@ -39,20 +39,18 @@ const Popup = ({ onClose, open, item, image }) => {
         </Box>
         <Box paddingY={2}>
           <Grid container spacing={{ xs: 2, md: 4 }}>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={4}>
               <CardMedia
-                  image={image}
-                  sx={{
-                    height: { xs: 340, md: 400 },
-                    filter:
-                        theme.palette.mode === 'dark'
-                            ? 'brightness(0.7)'
-                            : 'none',
-                  }}
+                image={image}
+                sx={{
+                  height: { xs: 340, md: 400 },
+                  filter:
+                    theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
+                }}
               />
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Details item={item}/>
+            <Grid item xs={12} md={4}>
+              <Details item={item} />
             </Grid>
           </Grid>
         </Box>
@@ -69,7 +67,7 @@ Popup.propTypes = {
     image: PropTypes.string.isRequired,
     role: PropTypes.string.isRequired,
     about: PropTypes.string.isRequired,
-  })
+  }),
 };
 
 export default Popup;
