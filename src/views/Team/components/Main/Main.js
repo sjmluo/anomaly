@@ -22,7 +22,7 @@ import {
   ychin,
 } from '/src/images/people';
 
-const mock = [
+const people = [
   {
     name: 'Simon Luo',
     image: sluo,
@@ -88,7 +88,7 @@ const Main = () => {
   return (
     <Box>
       <Grid container spacing={4}>
-        {mock.map((item, i) => (
+        {people.map((item, i) => (
           <Grid item xs={12} sm={6} md={4} key={i}>
             <Box
               component={'a'}
