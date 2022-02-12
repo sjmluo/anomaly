@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -8,6 +8,8 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
+
+import { Popup } from './components';
 
 import {
   mlin,
@@ -81,6 +83,8 @@ const mock = [
 
 const Main = () => {
   const theme = useTheme();
+  const [open, setOpen] = useState(false);
+
   return (
     <Box>
       <Grid container spacing={4}>
@@ -146,9 +150,11 @@ const Main = () => {
                         />
                       </svg>
                     }
+                    onClick={() => setOpen(true)}
                   >
                     Bio
                   </Button>
+                  <Popup open={open} onClose={() => setOpen(false)} item={item} image={item.image} />
                 </Box>
               </Box>
             </Box>

@@ -1,12 +1,15 @@
 import React from 'react';
+import { useTheme } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Dialog from '@mui/material/Dialog';
 
 import { Image, Details } from './components';
+import CardMedia from "@mui/material/CardMedia";
 
-const ProductDialog = ({ onClose, open }) => {
+const Popup = ({ onClose, open, item, image }) => {
+  const theme = useTheme();
   return (
     <Dialog onClose={onClose} open={open} maxWidth={'lg'}>
       <Box paddingY={{ xs: 1, sm: 2 }} paddingX={{ xs: 2, sm: 4 }}>
@@ -37,10 +40,19 @@ const ProductDialog = ({ onClose, open }) => {
         <Box paddingY={2}>
           <Grid container spacing={{ xs: 2, md: 4 }}>
             <Grid item xs={12} md={6}>
-              <Image />
+              <CardMedia
+                  image={image}
+                  sx={{
+                    height: { xs: 340, md: 400 },
+                    filter:
+                        theme.palette.mode === 'dark'
+                            ? 'brightness(0.7)'
+                            : 'none',
+                  }}
+              />
             </Grid>
             <Grid item xs={12} md={6}>
-              <Details />
+              <Details item={item}/>
             </Grid>
           </Grid>
         </Box>
@@ -49,9 +61,15 @@ const ProductDialog = ({ onClose, open }) => {
   );
 };
 
-ProductDialog.propTypes = {
+Popup.propTypes = {
   onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
+  item: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    role: PropTypes.string.isRequired,
+    about: PropTypes.string.isRequired,
+  })
 };
 
-export default ProductDialog;
+export default Popup;

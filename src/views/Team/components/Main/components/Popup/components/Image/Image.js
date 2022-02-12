@@ -17,7 +17,7 @@ const mock = [
   },
 ];
 
-const Image = () => {
+const Image = ({ image }) => {
   const [current, setCurrent] = useState(mock[0]);
   return (
     <Box>

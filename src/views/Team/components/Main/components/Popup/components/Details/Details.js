@@ -5,7 +5,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-const Details = () => {
+const Details = ( {item} ) => {
   const theme = useTheme();
   const [size, setSize] = useState('M');
   const [color, setColor] = useState('white');
@@ -15,7 +15,7 @@ const Details = () => {
   return (
     <Box>
       <Typography variant={'h5'} fontWeight={700} gutterBottom>
-        Classy sweatshirt
+        {item.name}
       </Typography>
       <Typography variant={'subtitle2'} color={'text.secondary'}>
         The finishes of this product are very realistic with a double stitching
