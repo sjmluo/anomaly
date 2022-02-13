@@ -6,9 +6,9 @@ import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import { Popup } from '../index';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {useTheme} from "@mui/material/styles";
+import { useTheme } from '@mui/material/styles';
 
 const MainBox = ({ item }) => {
   const theme = useTheme();
@@ -63,11 +63,7 @@ const MainBox = ({ item }) => {
         >
           Bio
         </Button>
-        <Popup
-          open={open}
-          onClose={() => setOpen(false)}
-          item={item}
-        />
+        <Popup open={open} onClose={() => setOpen(false)} item={item} />
       </Box>
     </Box>
   );

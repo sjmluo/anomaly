@@ -43,14 +43,14 @@ const people = [
     image: gvio,
     role: 'Technical Advisor',
     about:
-      "Dr Gareth A. Vio received his bachelor's degree in aerospace engineering, and PhD degree in aeronautical engineering from The University of Manchester in 1999 and 2005 respectively. He is currently a Senior Lecturer with the School of Aerospace, Mechanical and Mechatronic Engineering at The University of Sydney. His research interests include multidisciplinary design and topology optimisation, shock wave/boundary layer interaction, nonlinear structural dynamics and energy harvesting.",
+      'Dr Gareth A. Vio received his bachelor\'s degree in aerospace engineering, and PhD degree in aeronautical engineering from The University of Manchester in 1999 and 2005 respectively. He is currently a Senior Lecturer with the School of Aerospace, Mechanical and Mechatronic Engineering at The University of Sydney. His research interests include multidisciplinary design and topology optimisation, shock wave/boundary layer interaction, nonlinear structural dynamics and energy harvesting.',
   },
   {
     name: 'Mehrisadat Makki Alamdari',
     image: malamdari,
     role: 'Technical Advisor',
     about:
-      "Dr. Makki Alamdari is a Senior Lecturer in the UNSW, School of Civil and Environmental Engineering. She is the recipient of the highly competitive ARC Discovery Early Career Research Award (DECRA). Dr. Alamdari is also the winner of the prestigious JSPS Award (Japan Society for Promotion of Science). An award-winning scholar, Mehri is on the Executive of the Australian Network of Structural Health Monitoring (ANSHM), a member of The International Society for Structural Health Monitoring of Intelligent Infrastructure (ISHMII) and a steering committee member in the Australia, New Zealand and Oceania Researchers in Japan Network (ANZOR Japan Network). Prior to joining UNSW, she was a research fellow in Data61|CSIRO (since 2015) working on structural health monitoring of the iconic Sydney Harbour Bridge. Dr. Alamdari's expertise is structural health monitoring, vibration analysis and testing, inverse dynamic problems and signal processing. ",
+      'Dr. Makki Alamdari is a Senior Lecturer in the UNSW, School of Civil and Environmental Engineering. She is the recipient of the highly competitive ARC Discovery Early Career Research Award (DECRA). Dr. Alamdari is also the winner of the prestigious JSPS Award (Japan Society for Promotion of Science). An award-winning scholar, Mehri is on the Executive of the Australian Network of Structural Health Monitoring (ANSHM), a member of The International Society for Structural Health Monitoring of Intelligent Infrastructure (ISHMII) and a steering committee member in the Australia, New Zealand and Oceania Researchers in Japan Network (ANZOR Japan Network). Prior to joining UNSW, she was a research fellow in Data61|CSIRO (since 2015) working on structural health monitoring of the iconic Sydney Harbour Bridge. Dr. Alamdari\'s expertise is structural health monitoring, vibration analysis and testing, inverse dynamic problems and signal processing. ',
   },
   {
     name: 'Tony Wang',
@@ -96,7 +96,7 @@ const Main = () => {
                 },
               }}
             >
-              <MainBox item={item}/>
+              <MainBox item={item} />
             </Box>
           </Grid>
         ))}

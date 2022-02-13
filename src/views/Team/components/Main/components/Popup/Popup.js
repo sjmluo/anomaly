@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import Dialog from '@mui/material/Dialog';
 
 import CardMedia from '@mui/material/CardMedia';
-import Typography from "@mui/material/Typography";
+import Typography from '@mui/material/Typography';
 
 const Popup = ({ onClose, open, item }) => {
   const theme = useTheme();
