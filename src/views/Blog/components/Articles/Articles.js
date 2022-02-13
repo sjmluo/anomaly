@@ -140,23 +140,23 @@ const Articles = () => {
 Blog.propTypes = {
   node: PropTypes.shape({
     image: PropTypes.shape({
-      gatsbyImageData: PropTypes.object
+      gatsbyImageData: PropTypes.object,
     }),
     author: PropTypes.shape({
-      name: PropTypes.string
+      name: PropTypes.string,
     }),
     createdAt: PropTypes.string,
     description: PropTypes.shape({
-      description: PropTypes.string
+      description: PropTypes.string,
     }),
     gatsbyPath: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string,
   }).isRequired,
   theme: PropTypes.shape({
     palette: PropTypes.shape({
-      mode: PropTypes.string
-    })
-  })
+      mode: PropTypes.string,
+    }),
+  }),
 };
 
 export default Articles;

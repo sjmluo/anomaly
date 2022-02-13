@@ -43,7 +43,7 @@ const BlogArticle = ({ data }) => {
 };
 
 BlogArticle.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
 };
 
 export default BlogArticle;
