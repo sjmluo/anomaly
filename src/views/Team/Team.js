@@ -11,9 +11,9 @@ const Team = () => {
   const theme = useTheme();
   return (
     <Main>
-      <Container>
-        <Hero />
-      </Container>
+      {/*<Container>*/}
+      {/*  <Hero />*/}
+      {/*</Container>*/}
       <Container>
         <MainSection />
       </Container>
