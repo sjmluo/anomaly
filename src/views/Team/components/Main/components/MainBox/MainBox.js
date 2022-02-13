@@ -67,7 +67,6 @@ const MainBox = ({ item }) => {
           open={open}
           onClose={() => setOpen(false)}
           item={item}
-          image={item.image}
         />
       </Box>
     </Box>
