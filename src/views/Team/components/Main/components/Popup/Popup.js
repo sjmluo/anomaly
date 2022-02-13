@@ -5,11 +5,12 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Dialog from '@mui/material/Dialog';
 
-import { Details } from './components';
 import CardMedia from '@mui/material/CardMedia';
+import Typography from "@mui/material/Typography";
 
-const Popup = ({ onClose, open, item, image }) => {
+const Popup = ({ onClose, open, item }) => {
   const theme = useTheme();
+
   return (
     <Dialog onClose={onClose} open={open} maxWidth={'lg'}>
       <Box paddingY={{ xs: 1, sm: 2 }} paddingX={{ xs: 2, sm: 4 }}>
@@ -41,7 +42,7 @@ const Popup = ({ onClose, open, item, image }) => {
           <Grid container spacing={{ xs: 2, md: 4 }}>
             <Grid item xs={12} md={4}>
               <CardMedia
-                image={image}
+                image={item.image}
                 sx={{
                   height: { xs: 340, md: 400 },
                   filter:
@@ -49,8 +50,13 @@ const Popup = ({ onClose, open, item, image }) => {
                 }}
               />
             </Grid>
-            <Grid item xs={12} md={4}>
-              <Details item={item} />
+            <Grid item xs={12} md={8}>
+              <Typography variant={'h5'} fontWeight={700} gutterBottom>
+                {item.name}
+              </Typography>
+              <Typography variant={'subtitle2'} color={'text.secondary'}>
+                {item.about}
+              </Typography>
             </Grid>
           </Grid>
         </Box>
