@@ -2,6 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 module.exports = {
+  pathPrefix: "/anomaly",
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "demo",
