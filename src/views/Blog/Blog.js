@@ -5,7 +5,6 @@ import Divider from '@mui/material/Divider';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import { Articles } from './components';
-import { Form } from '../../components/Form';
 
 const Blog = () => {
   return (
@@ -18,17 +17,6 @@ const Blog = () => {
       <Container maxWidth={800} paddingY={'0 !important'}>
         <Divider />
       </Container>
-      <Box
-        minHeight={'82vh'}
-        display={'flex'}
-        alignItems={'center'}
-        bgcolor={'main'}
-        id={'contact-us'}
-      >
-        <Container>
-          <Form />
-        </Container>
-      </Box>
     </Main>
   );
 };

@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import { Template } from './components';
-import { Form } from '../../components/Form';
 
 const IndexView = () => {
   useEffect(() => {
@@ -98,17 +97,6 @@ const IndexView = () => {
         />
         <Container>
           <Template />
-        </Container>
-      </Box>
-      <Box
-        minHeight={'82vh'}
-        display={'flex'}
-        alignItems={'center'}
-        bgcolor={'alternate.main'}
-        id={'contact-us'}
-      >
-        <Container>
-          <Form />
         </Container>
       </Box>
     </Main>
