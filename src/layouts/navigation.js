@@ -2,7 +2,7 @@ const pages = {
   aboutUs: [
     {
       title: 'About',
-      href: '/about',
+      href: '/',
     },
     {
       title: 'Meet the team',
