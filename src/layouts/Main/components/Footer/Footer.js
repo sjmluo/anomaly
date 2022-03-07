@@ -34,55 +34,6 @@ const Footer = () => {
                 title="website title"
               />
             </Link>
-            <Box
-              display={'flex'}
-              component="a"
-              width={40}
-              href="https://www.linkedin.com/"
-              target="_blank"
-              marginTop={0.25}
-              marginLeft={4}
-            >
-              <Box
-                component={'img'}
-                src="https://raw.githubusercontent.com/ericfzhu/demo/03fa58419e1ef3c8461dd7d3395e6d0c4a9d6023/src/images/linkedin.svg"
-                height={1}
-                width={1}
-                color={'primary'}
-              />
-            </Box>
-            <Box
-              display={'flex'}
-              component="a"
-              width={40}
-              href="https://www.twitter.com/"
-              target="_blank"
-              marginTop={0.25}
-              marginLeft={2}
-            >
-              <Box
-                component={'img'}
-                src="https://raw.githubusercontent.com/ericfzhu/demo/03fa58419e1ef3c8461dd7d3395e6d0c4a9d6023/src/images/twitter.svg"
-                height={1}
-                width={1}
-              />
-            </Box>
-            <Box
-              display={'flex'}
-              component="a"
-              width={40}
-              href="https://www.github.com/"
-              target="_blank"
-              marginTop={0.25}
-              marginLeft={2}
-            >
-              <Box
-                component={'img'}
-                src="https://raw.githubusercontent.com/ericfzhu/demo/03fa58419e1ef3c8461dd7d3395e6d0c4a9d6023/src/images/github.svg"
-                height={1}
-                width={1}
-              />
-            </Box>
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
             <Box marginTop={1} marginRight={4}>
