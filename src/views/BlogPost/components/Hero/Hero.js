@@ -81,7 +81,6 @@ const Hero = ({ data }) => {
           <Box display={'flex'} alignItems={'center'}>
             <ListItemText
               sx={{ margin: 0 }}
-              primary={data.author.name}
               secondary={data.createdAt}
               primaryTypographyProps={{
                 variant: 'h6',

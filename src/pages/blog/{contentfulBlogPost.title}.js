@@ -20,9 +20,6 @@ export default BlogPostPage;
 export const query = graphql`
   query($id: String) {
     contentfulBlogPost(id: { eq: $id }) {
-      author {
-        name
-      }
       title
       text {
         childMarkdownRemark {
