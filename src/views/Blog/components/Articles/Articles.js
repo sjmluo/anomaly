@@ -104,7 +104,9 @@ const Articles = () => {
     <StaticQuery
       query={graphql`
         query {
-          allBlogPosts: allContentfulBlogPost {
+          allBlogPosts: allContentfulBlogPost(
+            sort: { fields: [createdAt], order: DESC }
+           ) {
             nodes {
               createdAt(formatString: "DD MMMM YYYY")
               title
