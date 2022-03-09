@@ -9,7 +9,7 @@ import { Link, Button } from 'gatsby-theme-material-ui';
 import { NavItem } from './components';
 import { ThemeModeToggler } from '../index';
 
-const Topbar = ({ onSidebarOpen, pages, colorInvert = false, onContactUs }) => {
+const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
   const { aboutUs: aboutUs, ourWork: ourWork } = pages;
