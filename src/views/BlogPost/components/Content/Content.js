@@ -9,8 +9,26 @@ import 'katex/dist/katex.min.css';
 const Content = ({ data }) => {
   return (
     <Box>
-      <Box paddingX={{ xs: 0, sm: 4, md: 6 }}>
+      <Box
+        sx={{
+            px: {
+                xs: 0,
+                sm: 4,
+                md: 6
+            },
+            maxWidth: '1100px',
+            '& .blog-body': {
+                '& div, img': {
+                    maxWidth: '100%',
+                    textAlign: 'center',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    display: 'block'
+                },
+            },
+            }}>
         <div
+            className="blog-body"
           dangerouslySetInnerHTML={{
             __html: data.text.childMarkdownRemark.html,
           }}
