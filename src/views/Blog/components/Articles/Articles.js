@@ -63,7 +63,7 @@ const Blog = ({ node, theme }) => (
           color={'text.secondary'}
           component={'i'}
         >
-          {node.author.name} - {node.createdAt}
+          {node.createdAt}
         </Typography>
       </Box>
       <Typography color="text.secondary">
@@ -104,12 +104,11 @@ const Articles = () => {
     <StaticQuery
       query={graphql`
         query {
-          allBlogPosts: allContentfulBlogPost {
+          allBlogPosts: allContentfulBlogPost(
+            sort: { fields: [createdAt], order: DESC }
+           ) {
             nodes {
               createdAt(formatString: "DD MMMM YYYY")
-              author {
-                name
-              }
               title
               image {
                 gatsbyImageData(width: 2000)
