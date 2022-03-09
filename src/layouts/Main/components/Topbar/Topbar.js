@@ -57,19 +57,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false, onContactUs }) => {
           />
         </Box>
         <ThemeModeToggler />
-        <Box marginLeft={4}>
-          <Button
-            variant="contained"
-            color="primary"
-            component="a"
-            target="_self"
-            // href="/#contact-us"
-            size="large"
-            onClick={() => onContactUs()}
-          >
-            Contact Us
-          </Button>
-        </Box>
       </Box>
       <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>
         <Box>

@@ -41,22 +41,6 @@ const SidebarNav = ({ pages, onContactUs, onClose }) => {
         <Box>
           <NavItem title={'Our Work'} items={ourWork} />
         </Box>
-        <Box marginTop={2}>
-          <Button
-            size={'large'}
-            variant="contained"
-            color="primary"
-            fullWidth
-            component="a"
-            target="_self"
-            onClick={() => {
-              onContactUs();
-              onClose();
-            }}
-          >
-            Contact Us
-          </Button>
-        </Box>
       </Box>
     </Box>
   );
