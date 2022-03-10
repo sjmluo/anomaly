@@ -6,7 +6,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import about from '../../../../images/about.png';
-import CardMedia from "@mui/material/CardMedia";
+import CardMedia from '@mui/material/CardMedia';
 
 const Story = () => {
   const theme = useTheme();
@@ -47,9 +47,7 @@ const Story = () => {
           md={6}
         >
           <Box maxWidth={500} width={1}>
-            <CardMedia
-                image={about}
-                component='img'/>
+            <CardMedia image={about} component="img" />
           </Box>
         </Grid>
       </Grid>

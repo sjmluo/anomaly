@@ -28,14 +28,14 @@ const Mission = () => {
               Our mission
             </Typography>
             <Typography component={'p'} color={'text.secondary'}>
-              • We are a <b>solutions-oriented team</b>, focused on solving the many
-              outstanding problems that currently exist in the structural health
-              monitoring field.
-              <br />
-              • We <b>aim to innovate</b> several technologies within Australia for the
-              distributed sensor problem that focus on time series applications.
-              <br />• We are <b>collaborative in nature</b>, and welcome the creation
-              of new value, especially when we can convert theoretical
+              • We are a <b>solutions-oriented team</b>, focused on solving the
+              many outstanding problems that currently exist in the structural
+              health monitoring field.
+              <br />• We <b>aim to innovate</b> several technologies within
+              Australia for the distributed sensor problem that focus on time
+              series applications.
+              <br />• We are <b>collaborative in nature</b>, and welcome the
+              creation of new value, especially when we can convert theoretical
               intuitions into experimental success.
             </Typography>
           </Box>
