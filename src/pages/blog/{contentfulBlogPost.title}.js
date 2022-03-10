@@ -26,7 +26,7 @@ export const query = graphql`
           html
         }
       }
-      createdAt(formatString: "DD MMMM YYYY")
+      date(formatString: "DD MMMM YYYY")
     }
   }
 `;

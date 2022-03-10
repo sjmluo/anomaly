@@ -63,7 +63,7 @@ const Blog = ({ node, theme }) => (
           color={'text.secondary'}
           component={'i'}
         >
-          {node.createdAt}
+          {node.date}
         </Typography>
       </Box>
       <Typography color="text.secondary">
@@ -108,7 +108,7 @@ const Articles = () => {
             sort: { fields: [createdAt], order: DESC }
           ) {
             nodes {
-              createdAt(formatString: "DD MMMM YYYY")
+              date(formatString: "DD MMMM YYYY")
               title
               image {
                 gatsbyImageData(width: 2000)
@@ -144,7 +144,7 @@ Blog.propTypes = {
     author: PropTypes.shape({
       name: PropTypes.string,
     }),
-    createdAt: PropTypes.string,
+    date: PropTypes.string,
     description: PropTypes.shape({
       description: PropTypes.string,
     }),

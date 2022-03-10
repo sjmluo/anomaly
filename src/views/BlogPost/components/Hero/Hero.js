@@ -81,7 +81,7 @@ const Hero = ({ data }) => {
           <Box display={'flex'} alignItems={'center'}>
             <ListItemText
               sx={{ margin: 0 }}
-              secondary={data.createdAt}
+              secondary={data.date}
               primaryTypographyProps={{
                 variant: 'h6',
                 sx: { color: 'common.white' },
@@ -103,7 +103,7 @@ Hero.propTypes = {
     author: PropTypes.shape({
       name: PropTypes.string,
     }),
-    createdAt: PropTypes.string,
+    date: PropTypes.string,
   }),
 };
 
