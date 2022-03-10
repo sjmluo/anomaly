@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import about from '../../../../images/about.png';
+import CardMedia from "@mui/material/CardMedia";
 
 const Story = () => {
   const theme = useTheme();
@@ -45,18 +47,9 @@ const Story = () => {
           md={6}
         >
           <Box maxWidth={500} width={1}>
-            <Box
-              component={'img'}
-              src={
-                'https://raw.githubusercontent.com/ericfzhu/demo/0973a20b0fb6e1db873feebfdfc2284e193ab495/src/images/processing.svg'
-              }
-              width={1}
-              height={1}
-              sx={{
-                filter:
-                  theme.palette.mode === 'dark' ? 'brightness(0.8)' : 'none',
-              }}
-            />
+            <CardMedia
+                image={about}
+                component='img'/>
           </Box>
         </Grid>
       </Grid>
