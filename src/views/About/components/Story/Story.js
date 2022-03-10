@@ -21,18 +21,18 @@ const Story = () => {
               Our story
             </Typography>
             <Typography component={'p'}>
-              Fusce pellentesque, ligula quis pharetra convallis, elit ipsum
-              congue velit, sed tempor orci eros nec magna. Pellentesque feugiat
-              lacus ut magna suscipit porta. Praesent porta neque a auctor
-              tincidunt. In imperdiet lorem ut metus pellentesque, malesuada
-              egestas mauris mattis.
-              <br />
-              <br />
-              Curabitur bibendum sem eu luctus egestas. Sed non tincidunt urna.
-              Orci varius natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus. Fusce in nisi et ligula imperdiet
-              pharetra. Donec viverra augue a pharetra viverra. Donec porttitor
-              at enim sed pellentesque.
+              The use of sensor technologies underpins everyday life for
+              Australians in many ways; ranging from wearable medical devices,
+              all the way to localized smart home network devices. Such sensors
+              tend to work in a distributed setting, whether in their own local
+              network, or over the cloud. Thus, there is an urgent call to
+              action when it comes developing solutions for the efficacy of
+              sensor array networks for the intelligent monitoring of damage
+              detection, damage localization, and context characterization. As a
+              team, we have collectively recognized that there is a need to push
+              for bleeding edge developments in the space of structural health
+              monitoring, and aim to provide compelling, and interpretable
+              solutions in this space.
             </Typography>
           </Box>
         </Grid>

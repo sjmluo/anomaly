@@ -28,11 +28,15 @@ const Mission = () => {
               Our mission
             </Typography>
             <Typography component={'p'} color={'text.secondary'}>
-              Nulla et pharetra tellus. Etiam commodo pellentesque rhoncus.
-              Curabitur lobortis a turpis quis gravida. Integer ultricies risus
-              sed enim luctus, quis maximus eros consectetur. Class aptent
-              taciti sociosqu ad litora torquent per conubia nostra, per
-              inceptos himenaeos.
+              • We are a solutions-oriented team, focused on solving the many
+              outstanding problems that currently exist in the structural health
+              monitoring field.
+              <br />
+              • We aim to innovate several technologies within Australia for the
+              distributed sensor problem that focus on time series applications.
+              <br />• We are collaborative in nature, and welcome the creation
+              of new value, especially when we can convert theoretical
+              intuitions into experimental success.
             </Typography>
           </Box>
         </Grid>
@@ -49,11 +53,11 @@ const Mission = () => {
               Our philosophy
             </Typography>
             <Typography component={'p'} color={'text.secondary'}>
-              Integer et faucibus dolor. Orci varius natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus. Duis eu ligula
-              iaculis, vehicula orci non, facilisis lorem. Mauris euismod
-              imperdiet leo suscipit sodales. Phasellus dignissim mollis sapien,
-              sed tincidunt nisi auctor eget.
+              We are motivated by a four-point design philosophy that focuses on
+              the principles of adaptability, scalability, interpretability, and
+              bleeding-edge innovation when comes to solving distributed
+              learning problems which focus on contextually situated anomaly
+              detection problems.
             </Typography>
           </Box>
         </Grid>

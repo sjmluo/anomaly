@@ -86,8 +86,8 @@ const Hero = () => {
               color: 'common.white',
             }}
           >
-            &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Curabitur ut ornare ex, quis fringilla nisi.&quot;
+            Building the future in robust, interpretable, and scalable solutions
+            for distributed machine learning problems.
           </Typography>
         </Box>
       </Container>
