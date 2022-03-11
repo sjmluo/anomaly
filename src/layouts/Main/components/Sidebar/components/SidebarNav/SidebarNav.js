@@ -1,16 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import { useTheme } from '@mui/material/styles';
 
-import NavItem from './components/NavItem';
+import { Link } from 'gatsby-theme-material-ui';
 
-const SidebarNav = ({ pages }) => {
-  const theme = useTheme();
-  const { mode } = theme.palette;
-
-  const { aboutUs: aboutUs, ourWork: ourWork } = pages;
-
+const SidebarNav = () => {
   return (
     <Box>
       <Box width={1} paddingX={2} paddingY={1}>
@@ -24,9 +17,7 @@ const SidebarNav = ({ pages }) => {
           <Box
             component={'img'}
             src={
-              mode === 'light'
-                ? 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
-                : 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
+              'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
             }
             height={0.5}
             width={0.5}
@@ -35,20 +26,24 @@ const SidebarNav = ({ pages }) => {
       </Box>
       <Box paddingX={2} paddingY={2}>
         <Box>
-          <NavItem title={'About Us'} items={aboutUs} />
-        </Box>
-        <Box>
-          <NavItem title={'Our Work'} items={ourWork} />
+          <Link
+            underline="none"
+            to="/blog"
+            color="text.primary"
+            sx={{
+              ':hover': {
+                color: 'text.secondary',
+              },
+            }}
+          >
+            BLOG
+          </Link>
         </Box>
       </Box>
     </Box>
   );
 };
 
-SidebarNav.propTypes = {
-  pages: PropTypes.object.isRequired,
-  onContactUs: PropTypes.func,
-  onClose: PropTypes.func,
-};
+SidebarNav.propTypes = {};
 
 export default SidebarNav;

@@ -10,9 +10,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Container from 'components/Container';
 import { Topbar, Sidebar, Footer } from './components';
 
-import pages from '../navigation';
-
-const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
+const Main = ({ children, bgcolor = 'transparent' }) => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -61,19 +59,13 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         elevation={trigger ? 1 : 0}
       >
         <Container paddingY={1}>
-          <Topbar
-            onSidebarOpen={handleSidebarOpen}
-            pages={pages}
-            colorInvert={trigger ? false : colorInvert}
-            onContactUs={goToContact}
-          />
+          <Topbar onSidebarOpen={handleSidebarOpen} onContactUs={goToContact} />
         </Container>
       </AppBar>
       <Sidebar
         onClose={handleSidebarClose}
         open={open}
         variant="temporary"
-        pages={pages}
         onContactUs={goToContact}
       />
       <main>
@@ -89,7 +81,6 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
 
 Main.propTypes = {
   children: PropTypes.node,
-  colorInvert: PropTypes.bool,
   bgcolor: PropTypes.string,
 };
 

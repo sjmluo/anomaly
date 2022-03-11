@@ -1,10 +1,10 @@
 import React from 'react';
-import About from 'views/About';
+import Home from 'views/Home';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 const IndexPage = () => {
-  return <About />;
+  return <Home />;
 };
 
 export default IndexPage;

@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-// import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, Button } from 'gatsby-theme-material-ui';
 
-import { NavItem } from './components';
 import { ThemeModeToggler } from '../index';
 
-const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
+const Topbar = ({ onSidebarOpen }) => {
   const theme = useTheme();
-  const { mode } = theme.palette;
-  const { aboutUs: aboutUs, ourWork: ourWork } = pages;
 
   return (
     <Box
@@ -23,7 +19,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
     >
       <Link
         display={'flex'}
-        // component="a"
         to="/"
         title="template title"
         width={{ xs: 100, md: 120 }}
@@ -31,30 +26,26 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         <Box
           component={'img'}
           src={
-            mode === 'light' && !colorInvert
-              ? 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
-              : 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
+            'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
           }
           height={0.5}
           width={0.5}
         />
       </Link>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'About Us'}
-            id={'about-us'}
-            items={aboutUs}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4} marginRight={4}>
-          <NavItem
-            title={'Our Work'}
-            id={'our-work'}
-            items={ourWork}
-            colorInvert={colorInvert}
-          />
+        <Box marginLeft={6} marginRight={6}>
+          <Link
+            underline="none"
+            to="/blog"
+            color="text.primary"
+            sx={{
+              ':hover': {
+                color: 'text.secondary',
+              },
+            }}
+          >
+            BLOG
+          </Link>
         </Box>
         <ThemeModeToggler />
       </Box>
@@ -84,9 +75,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
 
 Topbar.propTypes = {
   onSidebarOpen: PropTypes.func,
-  onContactUs: PropTypes.func,
-  pages: PropTypes.object,
-  colorInvert: PropTypes.bool,
 };
 
 export default Topbar;
