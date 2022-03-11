@@ -9,7 +9,7 @@ import Container from 'components/Container';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
-import about from '../../../../images/about.png';
+import about from '/src/images/about.png';
 
 const Hero = () => {
   useEffect(() => {

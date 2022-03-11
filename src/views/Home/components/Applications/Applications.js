@@ -9,9 +9,9 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import aircraft from "../../../../images/aircraft.svg";
-import bridge from "../../../../images/bridge.svg";
-import bookshelf from "../../../../images/bookshelf.svg";
+import aircraft from "/src/images/aircraft.svg";
+import bridge from "/src/images/bridge.svg";
+import bookshelf from "/src/images/bookshelf.svg";
 
 const Applications = () => {
   const theme = useTheme();
