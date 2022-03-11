@@ -24,7 +24,7 @@ const Applications = () => {
       padding={{ xs: 2, sm: 4 }}
       borderRadius={2}
       bgcolor={theme.palette.background.level2}
-      data-aos={'fade-up'}
+      // data-aos={'fade-up'}
     >
         <Typography
             variant="h4"
@@ -42,7 +42,7 @@ const Applications = () => {
             bridge,
             bookshelf,
           ].map((item, i) => (
-              <Box maxWidth={300} marginTop={2} marginRight={6} key={i}>
+              <Box maxWidth={300} marginTop={2} marginRight={8} key={i}>
                 <Box
                     component="img"
                     height={1}
