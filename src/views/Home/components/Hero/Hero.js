@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { alpha, useTheme } from '@mui/material/styles';
+import {useTheme} from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
-import Container from 'components/Container';
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
 import about from '/src/images/about.png';
 

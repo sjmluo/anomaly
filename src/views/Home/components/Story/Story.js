@@ -1,18 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import about from '../../../../images/about.png';
-import CardMedia from '@mui/material/CardMedia';
 
 const Story = () => {
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
 
   return (
     <Box>
