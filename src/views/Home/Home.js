@@ -3,7 +3,7 @@ import Divider from '@mui/material/Divider';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Hero, Story, Mission } from './components';
+import {Hero, Story, Mission, Applications } from './components';
 
 const Home = () => {
   return (
@@ -14,12 +14,15 @@ const Home = () => {
       <Container>
         <Story />
       </Container>
-      <Container paddingTop={'0 !important'}>
+      <Container>
         <Mission />
       </Container>
-      <Container maxWidth={800} paddingY={'0 !important'}>
-        <Divider />
-      </Container>
+      {/*<Container maxWidth={800} paddingY={'0 !important'}>*/}
+      {/*  <Divider />*/}
+      {/*</Container>*/}
+        <Container>
+            <Applications/>
+        </Container>
     </Main>
   );
 };
