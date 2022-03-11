@@ -1,22 +1,13 @@
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
+import {useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import {CardBox} from './Components';
 
-import { MainBox } from './components';
+import {gvio, lazzizi, malamdari, mlin, pcheema, sluo, twang, ychin,} from '/src/images/people';
 
-import {
-  mlin,
-  gvio,
-  lazzizi,
-  malamdari,
-  pcheema,
-  sluo,
-  twang,
-  ychin,
-} from '/src/images/people';
-
-const people = [
+const data = [
   {
     name: 'Simon Luo',
     image: sluo,
@@ -75,29 +66,28 @@ const people = [
   },
 ];
 
-const Main = () => {
+const Team = () => {
   const theme = useTheme();
 
   return (
     <Box>
-      <Grid container spacing={4}>
-        {people.map((item, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
-            <Box
-              component={'a'}
-              display={'block'}
-              width={1}
-              height={1}
-              sx={{
-                textDecoration: 'none',
-                transition: 'all .2s ease-in-out',
-                '&:hover': {
-                  transform: `translateY(-${theme.spacing(1 / 2)})`,
-                },
-              }}
-            >
-              <MainBox item={item} />
-            </Box>
+      <Box marginBottom={4}>
+        <Typography
+          variant="h4"
+          align={'center'}
+          gutterBottom
+          sx={{
+            fontWeight: 700,
+            marginTop: theme.spacing(1),
+          }}
+        >
+          Our Team
+        </Typography>
+      </Box>
+      <Grid container spacing={2}>
+        {data.map((item, i) => (
+          <Grid item xs={12} md={4} key={i}>
+            <CardBox data={item} />
           </Grid>
         ))}
       </Grid>
@@ -105,4 +95,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Team;
