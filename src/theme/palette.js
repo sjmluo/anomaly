@@ -28,6 +28,7 @@ export const light = {
     level2: '#f5f5f5',
     level1: '#ffffff',
   },
+  modal: '#ffffff',
 };
 
 export const dark = {
@@ -64,4 +65,5 @@ export const dark = {
     level2: '#333',
     level1: '#2D3748',
   },
+  modal: '#2C3036',
 };
