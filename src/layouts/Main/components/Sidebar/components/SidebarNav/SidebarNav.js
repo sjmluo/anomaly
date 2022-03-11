@@ -35,7 +35,7 @@ const SidebarNav = ({ pages }) => {
       </Box>
       <Box paddingX={2} paddingY={2}>
         <Box>
-          <NavItem title={'About Us'} items={aboutUs} />
+          <NavItem title={'Home Us'} items={aboutUs} />
         </Box>
         <Box>
           <NavItem title={'Our Work'} items={ourWork} />
