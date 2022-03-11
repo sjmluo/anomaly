@@ -29,20 +29,6 @@ const SidebarNav = () => {
         <Box>
           <Link
             underline="none"
-            to="/team"
-            color="text.primary"
-            sx={{
-              ':hover': {
-                color: 'text.secondary',
-              },
-            }}
-          >
-            TEAM
-          </Link>
-        </Box>
-        <Box>
-          <Link
-            underline="none"
             to="/blog"
             color="text.primary"
             sx={{
@@ -59,7 +45,6 @@ const SidebarNav = () => {
   );
 };
 
-SidebarNav.propTypes = {
-};
+SidebarNav.propTypes = {};
 
 export default SidebarNav;
