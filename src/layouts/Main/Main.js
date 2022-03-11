@@ -64,7 +64,6 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
           <Topbar
             onSidebarOpen={handleSidebarOpen}
             pages={pages}
-            colorInvert={trigger ? false : colorInvert}
             onContactUs={goToContact}
           />
         </Container>

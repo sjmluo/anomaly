@@ -30,31 +30,39 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       >
         <Box
           component={'img'}
-          src={
-            mode === 'light' && !colorInvert
-              ? 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
-              : 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
-          }
+          src={'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'}
           height={0.5}
           width={0.5}
         />
       </Link>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Home Us'}
-            id={'about-us'}
-            items={aboutUs}
-            colorInvert={colorInvert}
-          />
+        <Box marginLeft={6}>
+          <Link
+              underline="none"
+              to="/team"
+              color="text.primary"
+              sx={{
+                ':hover': {
+                  color: 'text.secondary',
+                },
+              }}
+          >
+            TEAM
+          </Link>
         </Box>
-        <Box marginLeft={4} marginRight={4}>
-          <NavItem
-            title={'Our Work'}
-            id={'our-work'}
-            items={ourWork}
-            colorInvert={colorInvert}
-          />
+        <Box marginLeft={6} marginRight={6}>
+          <Link
+              underline="none"
+              to="/blog"
+              color="text.primary"
+              sx={{
+                ':hover': {
+                  color: 'text.secondary',
+                },
+              }}
+          >
+            BLOG
+          </Link>
         </Box>
         <ThemeModeToggler />
       </Box>
