@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <Grid container spacing={4}>
       <Grid item container xs={12} md={6} alignItems={'center'}>
-        <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
+        {/*<Box data-aos={isMd ? 'fade-right' : 'fade-up'}>*/}
           <Box marginBottom={2}>
             <Typography
               variant="h4"
@@ -45,10 +45,13 @@ const Hero = () => {
               solutions for distributed machine learning problems.
             </Typography>
           </Box>
-          <Box marginBottom={3}>
-            <Typography variant="h6" component="p" color="text.secondary">
-            </Typography>
-          </Box>
+          {/*<Box marginBottom={3}>*/}
+          {/*  <Typography*/}
+          {/*    variant="h6"*/}
+          {/*    component="p"*/}
+          {/*    color="text.secondary"*/}
+          {/*  ></Typography>*/}
+          {/*</Box>*/}
           {/*<Box*/}
           {/*    display="flex"*/}
           {/*    flexDirection={{ xs: 'column', sm: 'row' }}*/}
@@ -89,7 +92,7 @@ const Hero = () => {
           {/*        Learn more*/}
           {/*    </Box>*/}
           {/*</Box>*/}
-        </Box>
+        {/*</Box>*/}
       </Grid>
       <Grid
         item
