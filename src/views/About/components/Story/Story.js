@@ -38,18 +38,6 @@ const Story = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid
-          item
-          container
-          justifyContent="center"
-          alignItems="center"
-          xs={12}
-          md={6}
-        >
-          <Box maxWidth={500} width={1}>
-            <CardMedia image={about} component="img" />
-          </Box>
-        </Grid>
       </Grid>
     </Box>
   );

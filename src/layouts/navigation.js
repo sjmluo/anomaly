@@ -1,17 +1,17 @@
 const pages = {
   aboutUs: [
     {
-      title: 'About',
+      title: 'ABOUT',
       href: '/',
     },
     {
-      title: 'Meet the team',
+      title: 'TEAM',
       href: '/team',
     },
   ],
   ourWork: [
     {
-      title: 'Blog',
+      title: 'BLOG',
       href: '/blog',
     },
   ],

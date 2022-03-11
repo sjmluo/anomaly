@@ -8,7 +8,9 @@ import { Hero, Story, Mission } from './components';
 const About = () => {
   return (
     <Main colorInvert={true}>
-      <Hero />
+      <Container>
+        <Hero />
+      </Container>
       <Container>
         <Story />
       </Container>
