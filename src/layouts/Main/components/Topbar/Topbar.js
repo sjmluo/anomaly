@@ -44,7 +44,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             to="/team"
             color="text.primary"
             sx={{
-              fontWeight: 'bold',
               ':hover': {
                 color: 'text.secondary',
               },
@@ -59,7 +58,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             to="/blog"
             color="text.primary"
             sx={{
-              fontWeight: 'bold',
               ':hover': {
                 color: 'text.secondary',
               },

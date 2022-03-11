@@ -39,7 +39,6 @@ const SidebarNav = ({ pages }) => {
             to="/team"
             color="text.primary"
             sx={{
-              fontWeight: 'bold',
               ':hover': {
                 color: 'text.secondary',
               },
@@ -54,7 +53,6 @@ const SidebarNav = ({ pages }) => {
             to="/blog"
             color="text.primary"
             sx={{
-              fontWeight: 'bold',
               ':hover': {
                 color: 'text.secondary',
               },
