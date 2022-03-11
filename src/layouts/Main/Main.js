@@ -10,7 +10,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Container from 'components/Container';
 import { Topbar, Sidebar, Footer } from './components';
 
-import pages from '../navigation';
 
 const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
   const theme = useTheme();
@@ -63,7 +62,6 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         <Container paddingY={1}>
           <Topbar
             onSidebarOpen={handleSidebarOpen}
-            pages={pages}
             onContactUs={goToContact}
           />
         </Container>
@@ -72,7 +70,6 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         onClose={handleSidebarClose}
         open={open}
         variant="temporary"
-        pages={pages}
         onContactUs={goToContact}
       />
       <main>

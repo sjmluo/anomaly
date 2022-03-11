@@ -1,17 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 
-import NavItem from './components/NavItem';
 import { Link } from 'gatsby-theme-material-ui';
 
-const SidebarNav = ({ pages }) => {
-  const theme = useTheme();
-  const { mode } = theme.palette;
-
-  const { aboutUs: aboutUs, ourWork: ourWork } = pages;
-
+const SidebarNav = () => {
   return (
     <Box>
       <Box width={1} paddingX={2} paddingY={1}>
@@ -67,9 +60,6 @@ const SidebarNav = ({ pages }) => {
 };
 
 SidebarNav.propTypes = {
-  pages: PropTypes.object.isRequired,
-  onContactUs: PropTypes.func,
-  onClose: PropTypes.func,
 };
 
 export default SidebarNav;

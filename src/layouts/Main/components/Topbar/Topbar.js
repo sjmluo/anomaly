@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-// import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, Button } from 'gatsby-theme-material-ui';
 
-import { NavItem } from './components';
 import { ThemeModeToggler } from '../index';
 
-const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
+const Topbar = ({ onSidebarOpen }) => {
   const theme = useTheme();
-  const { mode } = theme.palette;
-  const { aboutUs: aboutUs, ourWork: ourWork } = pages;
 
   return (
     <Box
@@ -23,7 +19,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
     >
       <Link
         display={'flex'}
-        // component="a"
         to="/"
         title="template title"
         width={{ xs: 100, md: 120 }}
@@ -94,9 +89,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
 
 Topbar.propTypes = {
   onSidebarOpen: PropTypes.func,
-  onContactUs: PropTypes.func,
-  pages: PropTypes.object,
-  colorInvert: PropTypes.bool,
 };
 
 export default Topbar;
