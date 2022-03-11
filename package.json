@@ -2,7 +2,7 @@
   "name": "demo",
   "version": "1.0.0",
   "private": true,
-  "description": "demo",
+  "description": "anomaly",
   "author": "Eric Zhu",
   "scripts": {
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
@@ -11,7 +11,8 @@
     "eslint:fix": "eslint ./src --fix",
     "build": "cross-env GENERATE_SOURCEMAP=false gatsby build",
     "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
-    "clear-all": "rimraf ./node_modules ./.cache ./public"
+    "clear-all": "rimraf ./node_modules ./.cache ./public",
+    "clean": "gatsby clean"
   },
   "eslintConfig": {
     "extends": [
