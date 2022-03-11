@@ -1,18 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import {useTheme} from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import aircraft from '/src/images/aircraft.svg';
 import bridge from '/src/images/bridge.svg';
 import bookshelf from '/src/images/bookshelf.svg';
 
 const Applications = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
 
   return (
     <Box

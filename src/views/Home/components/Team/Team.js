@@ -1,11 +1,20 @@
 import React from 'react';
-import {useTheme} from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import {CardBox} from './Components';
+import { CardBox } from './Components';
 
-import {gvio, lazzizi, malamdari, mlin, pcheema, sluo, twang, ychin,} from '/src/images/people';
+import {
+  gvio,
+  lazzizi,
+  malamdari,
+  mlin,
+  pcheema,
+  sluo,
+  twang,
+  ychin,
+} from '/src/images/people';
 
 const data = [
   {

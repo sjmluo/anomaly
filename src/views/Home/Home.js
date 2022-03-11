@@ -1,9 +1,8 @@
 import React from 'react';
-import Divider from '@mui/material/Divider';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import {Hero, Story, Mission, Applications } from './components';
+import { Hero, Story, Mission, Applications, Team } from './components';
 
 const Home = () => {
   return (
@@ -17,12 +16,12 @@ const Home = () => {
       <Container>
         <Mission />
       </Container>
-      {/*<Container maxWidth={800} paddingY={'0 !important'}>*/}
-      {/*  <Divider />*/}
-      {/*</Container>*/}
-        <Container>
-            <Applications/>
-        </Container>
+      <Container>
+        <Applications />
+      </Container>
+      <Container>
+        <Team />
+      </Container>
     </Main>
   );
 };
