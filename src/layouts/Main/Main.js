@@ -62,12 +62,7 @@ const Main = ({ children, bgcolor = 'transparent' }) => {
           <Topbar onSidebarOpen={handleSidebarOpen} onContactUs={goToContact} />
         </Container>
       </AppBar>
-      <Sidebar
-        onClose={handleSidebarClose}
-        open={open}
-        variant="temporary"
-        onContactUs={goToContact}
-      />
+      <Sidebar onClose={handleSidebarClose} open={open} variant="temporary" />
       <main>
         {children}
         <Divider />

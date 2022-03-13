@@ -20,7 +20,7 @@ const Topbar = ({ onSidebarOpen }) => {
       <Link
         display={'flex'}
         to="/"
-        title="template title"
+        title="Contextually Situated Anomaly Detection"
         width={{ xs: 100, md: 120 }}
       >
         <Box
@@ -33,6 +33,20 @@ const Topbar = ({ onSidebarOpen }) => {
         />
       </Link>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
+        {/*<Box marginLeft={6} marginRight={6}>*/}
+        {/*  <Link*/}
+        {/*      underline="none"*/}
+        {/*      to="/blog"*/}
+        {/*      color="text.primary"*/}
+        {/*      sx={{*/}
+        {/*        ':hover': {*/}
+        {/*          color: 'text.secondary',*/}
+        {/*        },*/}
+        {/*      }}*/}
+        {/*  >*/}
+        {/*    BLOG*/}
+        {/*  </Link>*/}
+        {/*</Box>*/}
         <Box marginLeft={6} marginRight={6}>
           <Link
             underline="none"

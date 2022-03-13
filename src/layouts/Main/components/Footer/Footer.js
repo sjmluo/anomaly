@@ -31,33 +31,11 @@ const Footer = () => {
                 }
                 height={1}
                 width={1}
-                title="website title"
+                title="Contextually Situated Anomaly Detection"
               />
             </Link>
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
-            <Box marginTop={1} marginRight={4}>
-              <Link
-                underline="none"
-                // component="a"
-                to="/about"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                About
-              </Link>
-            </Box>
-            <Box marginTop={1} marginRight={4}>
-              <Link
-                underline="none"
-                // component="a"
-                to="/team"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Team
-              </Link>
-            </Box>
             <Box marginTop={1}>
               <Link
                 underline="none"
@@ -66,7 +44,7 @@ const Footer = () => {
                 color="text.primary"
                 variant={'subtitle2'}
               >
-                Blog
+                BLOG
               </Link>
             </Box>
           </Box>
