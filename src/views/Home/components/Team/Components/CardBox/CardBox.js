@@ -27,7 +27,7 @@ const CardBox = ({ data }) => {
           height={1}
           component={Card}
           boxShadow={0}
-          bgcolor={'alternate.main'}
+          bgcolor={'background.block'}
         >
           <CardContent sx={{ padding: 3 }}>
             <ListItem component="div" disableGutters sx={{ padding: 0 }}>
@@ -42,8 +42,8 @@ const CardBox = ({ data }) => {
                 sx={{ margin: 0 }}
                 primary={data.name}
                 secondary={data.role}
-                primaryTypographyProps={{ variant: 'h6', fontWeight: 700 }}
-                secondaryTypographyProps={{ variant: 'subtitle1' }}
+                primaryTypographyProps={{ variant: 'h5', fontWeight: 700 }}
+                secondaryTypographyProps={{ variant: 'h6' }}
               />
             </ListItem>
           </CardContent>
