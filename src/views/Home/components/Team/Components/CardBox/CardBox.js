@@ -10,8 +10,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ListItemText from '@mui/material/ListItemText';
-import Modal from '@mui/material/Modal';
 import Stack from '@mui/material/Stack';
+import Dialog from '@mui/material/Dialog';
 
 const CardBox = ({ data }) => {
   const theme = useTheme();
@@ -49,89 +49,95 @@ const CardBox = ({ data }) => {
           </CardContent>
         </Box>
       </Box>
-      <Modal open={open} onClose={handleClose}>
-        <Box bgcolor={'alternate.main'}>
-          <Box
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        maxWidth={'lg'}
+        sx={{
+          '& .MuiPaper-root': {
+            borderRadius: 4,
+          },
+        }}
+      >
+        <Box
+          sx={{
+            width: 1000,
+            bgcolor: 'modal',
+            boxShadow: 24,
+            p: 4,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Card
             sx={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: 1000,
-              bgcolor: 'modal',
-              boxShadow: 24,
-              p: 4,
+              p: { xs: 2, md: 4 },
+              display: 'flex',
+              flexDirection: { xs: 'column', sm: 'row' },
+              width: 1,
+              height: 1,
+              boxShadow: 0,
             }}
           >
-            <Card
+            <Avatar
+              src={data.image}
+              variant={'rounded'}
               sx={{
-                p: { xs: 2, md: 4 },
-                display: 'flex',
-                flexDirection: { xs: 'column', sm: 'row' },
-                width: 1,
-                height: 1,
-                boxShadow: 0,
+                width: theme.spacing(20),
+                height: theme.spacing(20),
               }}
-            >
-              <Avatar
-                src={data.image}
-                variant={'rounded'}
-                sx={{
-                  width: theme.spacing(20),
-                  height: theme.spacing(20),
-                }}
-              />
-              <Box marginLeft={{ xs: 0, sm: 4 }} marginTop={{ xs: 4, sm: 0 }}>
-                <Box display={'flex'} alignItems={'center'} marginBottom={1}>
-                  <Typography fontWeight={700} variant={'h5'}>
-                    {data.name}
-                  </Typography>
-                </Box>
-                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
-                  <Typography>{data.role}</Typography>
-                </Stack>
-                <Stack
-                  direction={{ xs: 'column', md: 'row' }}
-                  spacing={{ xs: 1, md: 2 }}
-                  marginY={2}
-                  alignItems={'flex-start'}
-                >
-                  <Box
-                    display={'flex'}
-                    justifyContent={'center'}
-                    alignItems={'center'}
-                  >
-                    <Box
-                      component={'svg'}
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      width={18}
-                      height={18}
-                      color={'primary.dark'}
-                      marginRight={1}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </Box>
-                    <Typography color={'primary'} variant={'subtitle2'}>
-                      {'first.last@gmail.com'}
-                    </Typography>
-                  </Box>
-                </Stack>
-                <Typography variant={'subtitle2'} component={'p'}>
-                  {data.about}
+            />
+            <Box marginLeft={{ xs: 0, sm: 4 }} marginTop={{ xs: 4, sm: 0 }}>
+              <Box display={'flex'} alignItems={'center'} marginBottom={1}>
+                <Typography fontWeight={700} variant={'h5'}>
+                  {data.name}
                 </Typography>
               </Box>
-            </Card>
-          </Box>
+              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
+                <Typography>{data.role}</Typography>
+              </Stack>
+              <Stack
+                direction={{ xs: 'column', md: 'row' }}
+                spacing={{ xs: 1, md: 2 }}
+                marginY={2}
+                alignItems={'flex-start'}
+              >
+                <Box
+                  display={'flex'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                >
+                  <Box
+                    component={'svg'}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    width={18}
+                    height={18}
+                    color={'primary.dark'}
+                    marginRight={1}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </Box>
+                  <Typography color={'primary'} variant={'subtitle2'}>
+                    {'first.last@gmail.com'}
+                  </Typography>
+                </Box>
+              </Stack>
+              <Typography variant={'subtitle2'} component={'p'}>
+                {data.about}
+              </Typography>
+            </Box>
+          </Card>
         </Box>
-      </Modal>
+      </Dialog>
     </Box>
   );
 };
