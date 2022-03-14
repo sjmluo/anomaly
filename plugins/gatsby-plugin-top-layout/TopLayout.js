@@ -23,7 +23,7 @@ export default function TopLayout(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        {/*<title>Template website title</title>*/}
+        <title>Contextually Situated Anomaly Detection</title>
         <meta name="theme-color" content="#ffffff" />
         {/*<meta*/}
         {/*  name="description"*/}
