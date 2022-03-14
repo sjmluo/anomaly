@@ -23,33 +23,33 @@ export default function TopLayout(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <title>Template website title</title>
+        {/*<title>Template website title</title>*/}
         <meta name="theme-color" content="#ffffff" />
-        <meta
-          name="description"
-          content="Template website description"
-        />
+        {/*<meta*/}
+        {/*  name="description"*/}
+        {/*  content="Template website description"*/}
+        {/*/>*/}
         <meta
           name="robots"
           content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
         />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://raw.githubusercontent.com/ericfzhu/demo/master/src/images/blue%20banner.png"
-        />
+        {/*<meta*/}
+        {/*  property="og:image"*/}
+        {/*  content="https://raw.githubusercontent.com/ericfzhu/demo/master/src/images/blue%20banner.png"*/}
+        {/*/>*/}
         <meta
           property="og:title"
-          content="Template website title"
+          content="Contextually Situated Anomaly Detection"
         />
-        <meta
-          property="og:description"
-          content="Template website description"
-        />
+        {/*<meta*/}
+        {/*  property="og:description"*/}
+        {/*  content="Template website description"*/}
+        {/*/>*/}
         <meta
           property="og:url"
-          content="http://localhost:8000/"
+          content="https://sjmluo.github.io/anomaly/"
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
