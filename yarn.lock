@@ -16084,6 +16084,11 @@ react-image-lightbox@^5.1.4:
     prop-types "^15.7.2"
     react-modal "^3.11.1"
 
+react-img-zoom@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-img-zoom/-/react-img-zoom-0.1.0.tgz#a74799324e925b54299cf2c63b2ea6c9fa00e20a"
+  integrity sha512-TkoDAKJQWuZX3w7+8loHUH/1aT2nNdCPSz2RR8t1Ckp86mrZ728Afm5oOyc7a3bnCJsUK1suaDvXBjpvwJEnrg==
+
 react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -19508,10 +19513,8 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"

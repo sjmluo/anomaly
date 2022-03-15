@@ -2,8 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import CardMedia from '@mui/material/CardMedia';
 import about from '/src/images/about.png';
+import Zoom from 'react-img-zoom';
 
 const Hero = () => {
   return (
@@ -45,7 +45,7 @@ const Hero = () => {
             boxShadow: '19px 20px 0px 0 rgb(140 152 164 / 13%)',
           }}
         >
-          <CardMedia image={about} component="img" />
+          <Zoom img={about} component="img" height={350} width={590} zoomScale={3}/>
         </Box>
       </Grid>
     </Grid>
