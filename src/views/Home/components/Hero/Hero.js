@@ -45,7 +45,13 @@ const Hero = () => {
             boxShadow: '19px 20px 0px 0 rgb(140 152 164 / 13%)',
           }}
         >
-          <Zoom img={about} component="img" height={350} width={590} zoomScale={3}/>
+          <Zoom
+            img={about}
+            component="img"
+            height={350}
+            width={590}
+            zoomScale={3}
+          />
         </Box>
       </Grid>
     </Grid>

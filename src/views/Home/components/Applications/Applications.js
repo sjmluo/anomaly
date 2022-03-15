@@ -1,12 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
+import React, {useState} from 'react';
+import {useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import aircraft from '/src/images/aircraft.svg';
 import bridge from '/src/images/bridge.svg';
 import building from '/src/images/building.svg';
-import { FadeBox } from './Components';
+import {AnimatePresence, motion} from 'framer-motion';
+import './style.css';
 
 const data = [
   {
@@ -31,31 +32,67 @@ const data = [
 
 const Applications = () => {
   const theme = useTheme();
+  const [selectedTab, setSelectedTab] = useState(data[0]);
 
   return (
     <Box
       padding={{ xs: 2, sm: 4 }}
       borderRadius={2}
       bgcolor={theme.palette.alternate.main}
+      maxWidth={700}
+      margin="auto"
       // data-aos={'fade-up'}
     >
       <Typography
         variant="h4"
         gutterBottom
         align={'center'}
+        marginTop={4}
         sx={{
           fontWeight: 900,
         }}
       >
         Applications
       </Typography>
-      <Box display="flex" flexWrap="wrap" justifyContent={'center'}>
-        {data.map((item, i) => (
-          <Box maxWidth={300} marginTop={2} marginRight={8} key={i}>
-            <FadeBox data={item} />
-            {/*<Box component="img" height={1} width={1} src={item} alt="..." />*/}
-          </Box>
-        ))}
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        justifyContent={'center'}
+        marginTop={8}
+      >
+        <div className="window">
+          <nav>
+            <ul>
+              {data.map((item) => (
+                <li
+                  key={item.application}
+                  className={item === selectedTab ? 'selected' : ''}
+                  onClick={() => setSelectedTab(item)}
+                >
+                  <Box component="img" src={item.image} height={'40px'} />
+                  {`${item.application}`}
+                  {item === selectedTab ? (
+                    <motion.div className="underline" layoutId="underline" />
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <Box marginTop={4} />
+          <main>
+            <AnimatePresence exitBeforeEnter>
+              <motion.div
+                key={selectedTab ? selectedTab.application : 'empty'}
+                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.15 }}
+              >
+                {selectedTab ? selectedTab.description : '😋'}
+              </motion.div>
+            </AnimatePresence>
+          </main>
+        </div>
       </Box>
     </Box>
   );
