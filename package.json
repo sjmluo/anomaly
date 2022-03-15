@@ -11,8 +11,8 @@
     "eslint:fix": "eslint ./src --fix",
     "build": "cross-env GENERATE_SOURCEMAP=false gatsby build",
     "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
-    "clear-all": "rimraf ./node_modules ./.cache ./public",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "clear-all": "rimraf ./node_modules ./.cache ./public"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +51,7 @@
     "deepmerge": "^4.2.2",
     "dotenv": "^10.0.0",
     "formik": "^2.2.6",
+    "framer-motion": "^6.2.8",
     "gatsby": "^4.3.0",
     "gatsby-plugin-image": "^2.3.0",
     "gatsby-plugin-material-ui": "^4.1.0",
@@ -80,6 +81,7 @@
     "react-lazy-load-image-component": "^1.5.1",
     "react-scripts": "^4.0.3",
     "react-slick": "^0.28.1",
+    "react-spring": "^9.4.4",
     "react-syntax-highlighter": "^15.4.3",
     "react-typed": "^1.2.0",
     "react-visibility-sensor": "^5.1.1",
