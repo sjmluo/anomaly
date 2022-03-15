@@ -69,7 +69,7 @@ const data = [
   {
     name: 'Michael Lin',
     image: mlin,
-    role: 'placeholder',
+    role: 'Engineering Lead',
     about:
       'Michael holds a Bachelor of Science (Advanced Mathematics) and Bachelor of Advanced Studies (Data Science Honours) from the University of Sydney and currently works in the analytics space. He has explored various research fields in machine learning including computer vision, machine learning applications in bioinformatics, and anomaly detection. He is currently interested in machine learning and applying his research in both academic and industry environments.',
   },
