@@ -33,20 +33,20 @@ const Topbar = ({ onSidebarOpen }) => {
         />
       </Link>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        {/*<Box marginLeft={6} marginRight={6}>*/}
-        {/*  <Link*/}
-        {/*      underline="none"*/}
-        {/*      to="/blog"*/}
-        {/*      color="text.primary"*/}
-        {/*      sx={{*/}
-        {/*        ':hover': {*/}
-        {/*          color: 'text.secondary',*/}
-        {/*        },*/}
-        {/*      }}*/}
-        {/*  >*/}
-        {/*    BLOG*/}
-        {/*  </Link>*/}
-        {/*</Box>*/}
+        <Box marginLeft={6} marginRight={6}>
+          <Link
+            underline="none"
+            to="/"
+            color="text.primary"
+            sx={{
+              ':hover': {
+                color: 'text.secondary',
+              },
+            }}
+          >
+            HOME
+          </Link>
+        </Box>
         <Box marginLeft={6} marginRight={6}>
           <Link
             underline="none"

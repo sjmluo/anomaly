@@ -28,6 +28,22 @@ const SidebarNav = () => {
         <Box>
           <Link
             underline="none"
+            to="/"
+            color="text.primary"
+            sx={{
+              ':hover': {
+                color: 'text.secondary',
+              },
+            }}
+          >
+            HOME
+          </Link>
+        </Box>
+      </Box>
+      <Box paddingX={2} paddingY={2}>
+        <Box>
+          <Link
+            underline="none"
             to="/blog"
             color="text.primary"
             sx={{

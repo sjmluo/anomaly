@@ -3,7 +3,6 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 // import Link from '@mui/material/Link';
 import { Link } from 'gatsby-theme-material-ui';
-import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 
 const Footer = () => {
@@ -35,14 +34,34 @@ const Footer = () => {
               />
             </Link>
           </Box>
-          <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
-            <Box marginTop={1}>
+          <Box
+            sx={{ display: { xs: 'none', md: 'flex' } }}
+            alignItems={'center'}
+          >
+            <Box marginLeft={6} marginRight={6}>
               <Link
                 underline="none"
-                // component="a"
+                to="/"
+                color="text.primary"
+                sx={{
+                  ':hover': {
+                    color: 'text.secondary',
+                  },
+                }}
+              >
+                HOME
+              </Link>
+            </Box>
+            <Box marginLeft={6} marginRight={6}>
+              <Link
+                underline="none"
                 to="/blog"
                 color="text.primary"
-                variant={'subtitle2'}
+                sx={{
+                  ':hover': {
+                    color: 'text.secondary',
+                  },
+                }}
               >
                 BLOG
               </Link>
@@ -50,16 +69,16 @@ const Footer = () => {
           </Box>
         </Box>
       </Grid>
-      <Grid item xs={12}>
-        <Typography
-          align={'center'}
-          variant={'subtitle2'}
-          color="text.secondary"
-          gutterBottom
-        >
-          &copy; template copyright
-        </Typography>
-      </Grid>
+      {/*<Grid item xs={12}>*/}
+      {/*  <Typography*/}
+      {/*    align={'center'}*/}
+      {/*    variant={'subtitle2'}*/}
+      {/*    color="text.secondary"*/}
+      {/*    gutterBottom*/}
+      {/*  >*/}
+      {/*    &copy; template copyright*/}
+      {/*  </Typography>*/}
+      {/*</Grid>*/}
     </Grid>
   );
 };
