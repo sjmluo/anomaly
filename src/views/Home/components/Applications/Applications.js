@@ -8,6 +8,7 @@ import bridge from '/src/images/bridge.svg';
 import building from '/src/images/building.svg';
 import { AnimatePresence, motion } from 'framer-motion';
 import './style.css';
+import Grid from '@mui/material/Grid';
 
 const data = [
   {
@@ -67,22 +68,43 @@ const Applications = () => {
           <nav>
             <ul>
               {data.map((item) => (
-                <Box
+                // <Box
+                //   key={item.application}
+                //   margin={1}
+                //   sx={{
+                //     border: 1,
+                //     borderRadius: 16,
+                //     '.selected': {
+                //       background: 'theme.palette.primary.main',
+                //       borderRadius: 16,
+                //     },
+                //   }}
+                // >
+                <li
                   key={item.application}
-                  margin={1}
-                  sx={{ border: 1, borderRadius: 16 }}
+                  className={item === selectedTab ? 'selected' : ''}
+                  onClick={() => setSelectedTab(item)}
                 >
-                  <li
-                    className={item === selectedTab ? 'selected' : ''}
-                    onClick={() => setSelectedTab(item)}
+                  <motion.div
+                    className="menu-item"
+                    animate={{ opacity: item === selectedTab ? 1 : 0.5 }}
                   >
-                    <Box component="img" src={item.image} height={'40px'} />
-                    {`${item.application}`}
-                    {item === selectedTab ? (
-                      <motion.div className="underline" layoutId="underline" />
-                    ) : null}
-                  </li>
-                </Box>
+                    <Grid
+                      direction="row"
+                      alignItems="center"
+                      justifyContent="center"
+                    >
+                      <Box component="img" src={item.image} height={'40px'} />
+                      <Typography variant={'button'}>
+                        {item.application}
+                      </Typography>
+                      {/*{item === selectedTab ? (*/}
+                      {/*    <motion.div className="underline" layoutId="underline" />*/}
+                      {/*) : null}*/}
+                    </Grid>
+                  </motion.div>
+                </li>
+                // </Box>
               ))}
             </ul>
           </nav>
