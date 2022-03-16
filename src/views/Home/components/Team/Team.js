@@ -34,7 +34,7 @@ const data = [
   {
     name: 'Prasad Cheema',
     image: pcheema,
-    role: 'Technical Lead',
+    role: 'Project Personnel / Technical Lead',
     about:
       'Dr Prasad Cheema holds a bachelor in Computer Science, and a bachelor in Aeronautical (Space) Engineering. Furthermore, he has obtained a PhD in the applications of machine learning for civil and aerospace structural systems from The University of Sydney, with a particular focus on developing technologies for anomaly detection in sensor arrays. Dr Prasad Cheema consistently aims to push for development in the space of novel uses of machine learning technologies for sensor array technologies as he believes this will help shape the future for the benefit of humanity. ',
   },

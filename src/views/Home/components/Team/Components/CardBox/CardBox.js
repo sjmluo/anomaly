@@ -100,40 +100,40 @@ const CardBox = ({ data }) => {
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
                 <Typography>{data.role}</Typography>
               </Stack>
-              <Stack
-                direction={{ xs: 'column', md: 'row' }}
-                spacing={{ xs: 1, md: 2 }}
-                marginY={2}
-                alignItems={'flex-start'}
-              >
-                <Box
-                  display={'flex'}
-                  justifyContent={'center'}
-                  alignItems={'center'}
-                >
-                  <Box
-                    component={'svg'}
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    width={18}
-                    height={18}
-                    color={'primary.dark'}
-                    marginRight={1}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </Box>
-                  {/*<Typography color={'primary'} variant={'subtitle2'}>*/}
-                  {/*  {'first.last@gmail.com'}*/}
-                  {/*</Typography>*/}
-                </Box>
-              </Stack>
+              {/*<Stack*/}
+              {/*  direction={{ xs: 'column', md: 'row' }}*/}
+              {/*  spacing={{ xs: 1, md: 2 }}*/}
+              {/*  marginY={2}*/}
+              {/*  alignItems={'flex-start'}*/}
+              {/*>*/}
+              {/*  <Box*/}
+              {/*    display={'flex'}*/}
+              {/*    justifyContent={'center'}*/}
+              {/*    alignItems={'center'}*/}
+              {/*  >*/}
+              {/*    <Box*/}
+              {/*      component={'svg'}*/}
+              {/*      xmlns="http://www.w3.org/2000/svg"*/}
+              {/*      fill="none"*/}
+              {/*      viewBox="0 0 24 24"*/}
+              {/*      stroke="currentColor"*/}
+              {/*      width={18}*/}
+              {/*      height={18}*/}
+              {/*      color={'primary.dark'}*/}
+              {/*      marginRight={1}*/}
+              {/*    >*/}
+              {/*      <path*/}
+              {/*        strokeLinecap="round"*/}
+              {/*        strokeLinejoin="round"*/}
+              {/*        strokeWidth={2}*/}
+              {/*        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"*/}
+              {/*      />*/}
+              {/*    </Box>*/}
+              {/*    <Typography color={'primary'} variant={'subtitle2'}>*/}
+              {/*      {'first.last@gmail.com'}*/}
+              {/*    </Typography>*/}
+              {/*  </Box>*/}
+              {/*</Stack>*/}
               <Typography variant={'subtitle2'} component={'p'}>
                 {data.about}
               </Typography>
