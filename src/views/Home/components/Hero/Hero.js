@@ -32,8 +32,8 @@ const Hero = () => {
         md={6}
       >
         <Box
-          maxWidth={600}
-          maxHeight={400}
+          maxWidth={540}
+          maxHeight={323}
           width={1}
           height={1}
           sx={{
@@ -42,7 +42,7 @@ const Hero = () => {
           }}
         >
           <Zoom>
-            <Box component="img" src={about} height={400} width={590} />
+            <Box component="img" src={about} height={323} width={540} />
           </Zoom>
         </Box>
       </Grid>
