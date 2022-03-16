@@ -41,6 +41,9 @@ const Applications = () => {
       bgcolor={theme.palette.alternate.main}
       maxWidth={700}
       margin="auto"
+      sx={{
+        boxShadow: 4,
+      }}
       // data-aos={'fade-up'}
     >
       <Typography
@@ -58,7 +61,7 @@ const Applications = () => {
         display="flex"
         flexWrap="wrap"
         justifyContent={'center'}
-        marginTop={8}
+        marginTop={4}
       >
         <div className="window">
           <nav>

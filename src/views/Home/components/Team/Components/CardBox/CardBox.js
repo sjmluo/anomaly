@@ -27,7 +27,10 @@ const CardBox = ({ data }) => {
           height={1}
           component={Card}
           boxShadow={0}
-          bgcolor={'background.block'}
+          bgcolor={'alternate.main'}
+          sx={{
+            boxShadow: 1,
+          }}
         >
           <CardContent sx={{ padding: 3 }}>
             <ListItem component="div" disableGutters sx={{ padding: 0 }}>
