@@ -24,6 +24,9 @@ const Content = ({ data }) => {
               marginLeft: 'auto',
               marginRight: 'auto',
               display: 'block',
+              '& .render-viewer-fatal, .render-viewer-error, .render-viewer-invalid': {
+                display: 'none !important',
+              },
             },
           },
         }}
