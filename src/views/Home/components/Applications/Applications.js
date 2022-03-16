@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, {useState} from 'react';
-import {useTheme} from '@mui/material/styles';
+import React, { useState } from 'react';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import aircraft from '/src/images/aircraft.svg';
 import bridge from '/src/images/bridge.svg';
 import building from '/src/images/building.svg';
-import {AnimatePresence, motion} from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import './style.css';
 
 const data = [

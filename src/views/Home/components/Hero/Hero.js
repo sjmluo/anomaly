@@ -3,7 +3,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import about from '/src/images/about.png';
-import Zoom from 'react-img-zoom';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
+import './style.css';
 
 const Hero = () => {
   return (
@@ -37,7 +39,7 @@ const Hero = () => {
       >
         <Box
           maxWidth={600}
-          maxHeight={500}
+          maxHeight={450}
           width={1}
           height={1}
           sx={{
@@ -45,13 +47,9 @@ const Hero = () => {
             boxShadow: '19px 20px 0px 0 rgb(140 152 164 / 13%)',
           }}
         >
-          <Zoom
-            img={about}
-            component="img"
-            height={350}
-            width={590}
-            zoomScale={3}
-          />
+          <Zoom>
+            <Box component="img" src={about} height={450} width={590} />
+          </Zoom>
         </Box>
       </Grid>
     </Grid>
