@@ -64,17 +64,22 @@ const Applications = () => {
           <nav>
             <ul>
               {data.map((item) => (
-                <li
+                <Box
                   key={item.application}
-                  className={item === selectedTab ? 'selected' : ''}
-                  onClick={() => setSelectedTab(item)}
+                  margin={1}
+                  sx={{ border: 1, borderRadius: 16 }}
                 >
-                  <Box component="img" src={item.image} height={'40px'} />
-                  {`${item.application}`}
-                  {item === selectedTab ? (
-                    <motion.div className="underline" layoutId="underline" />
-                  ) : null}
-                </li>
+                  <li
+                    className={item === selectedTab ? 'selected' : ''}
+                    onClick={() => setSelectedTab(item)}
+                  >
+                    <Box component="img" src={item.image} height={'40px'} />
+                    {`${item.application}`}
+                    {item === selectedTab ? (
+                      <motion.div className="underline" layoutId="underline" />
+                    ) : null}
+                  </li>
+                </Box>
               ))}
             </ul>
           </nav>
