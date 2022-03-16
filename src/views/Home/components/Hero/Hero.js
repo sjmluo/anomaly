@@ -30,16 +30,10 @@ const Hero = () => {
         justifyContent={'center'}
         xs={12}
         md={6}
-        sx={{
-          '& .lazy-load-image-background.lazy-load-image-loaded': {
-            width: '100%',
-            height: '100%',
-          },
-        }}
       >
         <Box
           maxWidth={600}
-          maxHeight={450}
+          maxHeight={400}
           width={1}
           height={1}
           sx={{
@@ -48,7 +42,7 @@ const Hero = () => {
           }}
         >
           <Zoom>
-            <Box component="img" src={about} height={450} width={590} />
+            <Box component="img" src={about} height={400} width={590} />
           </Zoom>
         </Box>
       </Grid>
