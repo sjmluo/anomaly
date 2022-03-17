@@ -14,12 +14,13 @@ import {
   sluo,
   twang,
   ychin,
+    simon
 } from '/src/images/people';
 
 const data = [
   {
     name: 'Simon Luo',
-    image: sluo,
+    image: simon,
     role: 'Project Lead',
     about:
       'Dr Simon Luo holds a Bachelors of Aeronautical Engineering, Bachelor of Science (Computer Science) and a PhD in Machine Learning from The University of Sydney. His research interest is primarily focused in machine learning, cyber security, human-computer interactions, robotics and aerospace engineering. Dr Simon Luo aims to use his expertise in machine learning to design novel approaches for anomaly detections particularly in applications for cyber security and signal processing.',
