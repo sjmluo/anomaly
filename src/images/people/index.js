@@ -7,5 +7,17 @@ import sluo from './sluo.png';
 import twang from './twang.png';
 import ychin from './ychin.png';
 import simon from './simon.png';
+import prasad from './prasad.jpg';
 
-export { mlin, gvio, lazzizi, malamdari, pcheema, sluo, twang, ychin, simon };
+export {
+  mlin,
+  gvio,
+  lazzizi,
+  malamdari,
+  pcheema,
+  sluo,
+  twang,
+  ychin,
+  simon,
+  prasad,
+};
