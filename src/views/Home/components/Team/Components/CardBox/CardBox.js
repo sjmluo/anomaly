@@ -46,7 +46,7 @@ const CardBox = ({ data }) => {
                 primary={data.name}
                 secondary={data.role}
                 primaryTypographyProps={{ variant: 'h5', fontWeight: 700 }}
-                secondaryTypographyProps={{ variant: 'h6' }}
+                secondaryTypographyProps={{ variant: 'subtitle1' }}
               />
             </ListItem>
           </CardContent>

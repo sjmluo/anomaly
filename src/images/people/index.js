@@ -1,23 +1,10 @@
-import mlin from './mlin.png';
-import gvio from './gvio.jpg';
-import lazzizi from './lazzizi.jpg';
-import malamdari from './malamdari.png';
-import pcheema from './pcheema.png';
-import sluo from './sluo.png';
-import twang from './twang.png';
-import ychin from './ychin.png';
+import michael from './michael.png';
+import gareth from './gareth.png';
+import lamiae from './lamiae.jpg';
+import mehrisadat from './mehrisadat.png';
+import tony from './tony.png';
+import yee from './yee.png';
 import simon from './simon.png';
 import prasad from './prasad.jpg';
 
-export {
-  mlin,
-  gvio,
-  lazzizi,
-  malamdari,
-  pcheema,
-  sluo,
-  twang,
-  ychin,
-  simon,
-  prasad,
-};
+export { michael, gareth, lamiae, mehrisadat, tony, yee, simon, prasad };
