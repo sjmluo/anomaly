@@ -16,7 +16,7 @@ const BlogArticle = ({ data }) => {
       <Box>
         <Hero data={data} />
         <Container>
-          <Grid container spacing={4}>
+          <Grid container spacing={2}>
             <Content data={data} />
           </Grid>
         </Container>
