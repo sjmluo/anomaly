@@ -32,11 +32,11 @@ const Hero = () => {
         md={6}
       >
         <Box
-          maxWidth={540}
-          maxHeight={323}
-          width={1}
-          height={1}
+          // width={1}
+          // height={1}
           sx={{
+              maxWidth: { xs: 1 ,md: 540 },
+              maxHeight: { xs: 1, md: 323 },
             objectFit: 'cover',
             boxShadow: '19px 20px 0px 0 rgb(140 152 164 / 13%)',
           }}
