@@ -32,17 +32,17 @@ const Hero = () => {
         md={6}
       >
         <Box
-          // width={1}
-          // height={1}
+          maxWidth={540}
+          maxHeight={323}
+          width={1}
+          height={1}
           sx={{
-              maxWidth: { xs: 1 ,md: 540 },
-              maxHeight: { xs: 1, md: 323 },
             objectFit: 'cover',
             boxShadow: '19px 20px 0px 0 rgb(140 152 164 / 13%)',
           }}
         >
           <Zoom>
-            <Box component="img" src={about} height={323} width={540} />
+            <Box component="img" src={about} height={'100%'} width={'100%'}/>
           </Zoom>
         </Box>
       </Grid>
