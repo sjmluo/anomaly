@@ -108,7 +108,7 @@ const Applications = () => {
               ))}
             </ul>
           </nav>
-          <Box marginTop={4} />
+          <Box marginTop={5} />
           <main>
             <AnimatePresence exitBeforeEnter>
               <motion.div
