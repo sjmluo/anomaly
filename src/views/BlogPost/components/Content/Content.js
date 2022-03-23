@@ -8,19 +8,19 @@ import 'katex/dist/katex.min.css';
 
 const Content = ({ data }) => {
   return (
-    <Box>
+    <Box maxWidth="100%">
       <Box
         sx={{
           px: {
-            xs: 0,
+            xs: 4,
             sm: 4,
             md: 6,
           },
-          maxWidth: '1100px',
+
           '& .blog-body': {
-            '& div, img': {
+            '& p': {
               maxWidth: '100%',
-              textAlign: 'center',
+              textAlign: 'left',
               marginLeft: 'auto',
               marginRight: 'auto',
               display: 'block',
@@ -28,6 +28,16 @@ const Content = ({ data }) => {
                 display: 'none !important',
               },
             },
+            '& img': {
+              maxWidth: { xs: '90%', md: '50%' },
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              textAlign: 'center',
+              display: 'block',
+            },
+              '& .embedVideo-iframe': {
+                width: '100%',
+              }
           },
         }}
       >
