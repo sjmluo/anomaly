@@ -35,9 +35,9 @@ const Content = ({ data }) => {
               textAlign: 'center',
               display: 'block',
             },
-              '& .embedVideo-iframe': {
-                width: '100%',
-              }
+            '& .embedVideo-iframe': {
+              width: '100%',
+            },
           },
         }}
       >
