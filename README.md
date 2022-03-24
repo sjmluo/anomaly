@@ -50,3 +50,21 @@
    ```shell
    yarn deploy
    ```
+
+## 📁 Folder structure
+
+    ├── plugins                 # Custom local plugins
+    │   ├── mui-emotion         # Emotion based styling for CSS-in-JS for Gatsby
+    │   ├── top-layout          # React helmet based SEO
+    ├── src                     # Source files
+    │   ├── components          # Shared common components
+    │   ├── images              # All images that are used for the website
+    │   ├── layouts             # Handle different types of page layouts
+    │   ├── pages               # React components to programmatically control Gatsby pages
+    │   ├── theme               # Color themes and palettes
+    │   └── views               # Individual components for the Gatsby pages
+    ├── .eslint.js              # Config for ESlint
+    ├── .prettierrc             # Config for Prettier
+    ├── gatsby-config.js        # Config for Gatsby plugins
+    ├── package.json            # Dependencies and scripts
+    └── README.md

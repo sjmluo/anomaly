@@ -1,8 +1,8 @@
 {
-  "name": "demo",
+  "name": "anomaly",
   "version": "1.0.0",
   "private": true,
-  "description": "anomaly",
+  "description": "Contextually Situated Anomaly Detection",
   "author": "Eric Zhu",
   "scripts": {
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
