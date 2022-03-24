@@ -12,7 +12,8 @@
     "build": "cross-env GENERATE_SOURCEMAP=false gatsby build",
     "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
     "clean": "gatsby clean",
-    "clear-all": "rimraf ./node_modules ./.cache ./public"
+    "clear-all": "rimraf ./node_modules ./.cache ./public",
+    "serve": "gatsby serve"
   },
   "eslintConfig": {
     "extends": [
