@@ -28,8 +28,10 @@
    ```sh
    yarn install
    ```
+   
+4. Replace `.env.development.template` with `.env.development` and fill in the `CONTENTFUL_ACCESS_TOKEN`
 
-4. Start the development server
+5. Start the development server
 
    ```sh
    yarn develop
@@ -38,7 +40,9 @@
 
 ## 🚀 Deploying for Production
 
-1. Preview the site before deployment
+1. Replace `.env.production.template` with `.env.production` and fill in the `CONTENTFUL_ACCESS_TOKEN`
+
+2. Preview the site before deployment
 
    ```shell
    yarn build
@@ -46,7 +50,7 @@
    yarn serve
    ```
 
-2. Deploy to Github Pages
+3. Deploy to Github Pages
    ```shell
    yarn deploy
    ```
