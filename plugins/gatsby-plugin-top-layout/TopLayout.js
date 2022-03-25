@@ -17,7 +17,7 @@ export default function TopLayout(props) {
         <meta charSet="utf-8" />
         <link
           rel="shortcut icon"
-          href="https://raw.githubusercontent.com/ericfzhu/demo/f6a5422ac7f117db143a6199573ad0856f764e21/src/images/logo.svg"
+          href="https://raw.githubusercontent.com/sjmluo/anomaly/master/src/images/logo.png"
         />
         <meta
           name="viewport"
