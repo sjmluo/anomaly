@@ -6,6 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link, Button } from 'gatsby-theme-material-ui';
 
 import { ThemeModeToggler } from '../index';
+import logo from '/src/images/logo.png';
 
 const Topbar = ({ onSidebarOpen }) => {
   const theme = useTheme();
@@ -23,14 +24,7 @@ const Topbar = ({ onSidebarOpen }) => {
         title="Contextually Situated Anomaly Detection"
         width={{ xs: 100, md: 120 }}
       >
-        <Box
-          component={'img'}
-          src={
-            'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
-          }
-          height={0.5}
-          width={0.5}
-        />
+        <Box component={'img'} src={logo} height={0.5} width={0.5} />
       </Link>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box marginLeft={6} marginRight={6}>

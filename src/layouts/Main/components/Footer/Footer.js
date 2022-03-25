@@ -3,12 +3,10 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 // import Link from '@mui/material/Link';
 import { Link } from 'gatsby-theme-material-ui';
-import { useTheme } from '@mui/material/styles';
+
+import logo from '/src/images/logo.png';
 
 const Footer = () => {
-  const theme = useTheme();
-  const { mode } = theme.palette;
-
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
@@ -23,11 +21,7 @@ const Footer = () => {
             <Link display={'flex'} width={80} to="/">
               <Box
                 component={'img'}
-                src={
-                  mode === 'light'
-                    ? 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
-                    : 'https://raw.githubusercontent.com/ericfzhu/demo/9778acc41dba64707e687c760af97e9aadac11e2/src/images/logo.svg'
-                }
+                src={logo}
                 height={1}
                 width={1}
                 title="Contextually Situated Anomaly Detection"

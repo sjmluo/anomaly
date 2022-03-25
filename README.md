@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="src/images/logo.svg" alt="icon" width="125px" />
+    <img src="src/images/logo.png" alt="icon" width="125px" />
 </p>
 <h1 align="center">
     Website for Contextually Situated Anomaly Detection
