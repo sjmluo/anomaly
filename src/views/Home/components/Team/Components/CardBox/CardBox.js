@@ -65,7 +65,7 @@ const CardBox = ({ data }) => {
         <Box
           sx={{
             width: '100%',
-            bgcolor: 'modal',
+            bgcolor: 'alternate.main',
             boxShadow: 24,
             p: 4,
             display: 'flex',
@@ -81,6 +81,7 @@ const CardBox = ({ data }) => {
               width: 1,
               height: 1,
               boxShadow: 0,
+              bgcolor: 'alternate.main',
             }}
           >
             <Avatar

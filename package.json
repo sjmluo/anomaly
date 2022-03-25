@@ -7,10 +7,10 @@
   "scripts": {
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
-    "prettier:fix": "prettier \"./src/**/*.js\" --write",
-    "eslint:fix": "eslint ./src --fix",
+    "prettier": "prettier \"./src/**/*.js\" --write",
+    "eslint": "eslint ./src --fix",
     "build": "cross-env GENERATE_SOURCEMAP=false gatsby build",
-    "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
+    "codeStyle": "npm run prettier && npm run eslint",
     "clean": "gatsby clean",
     "clear-all": "rimraf ./node_modules ./.cache ./public",
     "serve": "gatsby serve"
