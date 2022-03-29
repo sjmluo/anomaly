@@ -25,18 +25,18 @@ const data = [
       'Dr Simon Luo holds a Bachelors of Aeronautical Engineering, Bachelor of Science (Computer Science) and a PhD in Machine Learning from The University of Sydney. His research interest is primarily focused in machine learning, cyber security, human-computer interactions, robotics and aerospace engineering. Dr Simon Luo aims to use his expertise in machine learning to design novel approaches for anomaly detections particularly in applications for cyber security and signal processing.',
   },
   {
-    name: 'Lamiae Azizi',
-    image: lamiae,
-    role: 'Project Personnel / Technical Lead',
-    about:
-      'Dr Lamiae Azizi received a PhD in Applied Mathematics from Joseph Fourier University (France) and the French National in December 2011 and the French national research institute for the digital sciences (INRIA). She is a Senior Lecturer at the School of Mathematics and Statistics and the Deputy Champion for the Sydney Nano Grand challenge: "Computational Materials Discovery". Before joining the University of Sydney, she held the position of senior statistician at the MRC-University of Cambridge (UK). Her research focuses on solving physical world problems and complex systems with Probabilistic Machine Learning/Artificial Intelligence.',
-  },
-  {
     name: 'Prasad Cheema',
     image: prasad,
     role: 'Project Personnel / Technical Lead',
     about:
       'Dr Prasad Cheema holds a bachelor in Computer Science, and a bachelor in Aeronautical (Space) Engineering. Furthermore, he has obtained a PhD in the applications of machine learning for civil and aerospace structural systems from The University of Sydney, with a particular focus on developing technologies for anomaly detection in sensor arrays. Dr Prasad Cheema consistently aims to push for development in the space of novel uses of machine learning technologies for sensor array technologies as he believes this will help shape the future for the benefit of humanity. ',
+  },
+  {
+    name: 'Lamiae Azizi',
+    image: lamiae,
+    role: 'Technical Advisor',
+    about:
+      'Dr Lamiae Azizi received a PhD in Applied Mathematics from Joseph Fourier University (France) and the French National in December 2011 and the French national research institute for the digital sciences (INRIA). She is a Senior Lecturer at the School of Mathematics and Statistics and the Deputy Champion for the Sydney Nano Grand challenge: "Computational Materials Discovery". Before joining the University of Sydney, she held the position of senior statistician at the MRC-University of Cambridge (UK). Her research focuses on solving physical world problems and complex systems with Probabilistic Machine Learning/Artificial Intelligence.',
   },
   {
     name: 'Gareth Vio',
